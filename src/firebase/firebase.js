@@ -1,6 +1,5 @@
-// lib/firebase.js
 import firebase from "firebase/app";
-import "firebase/auth"; // Import the Firebase Auth module
+import "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
@@ -11,7 +10,6 @@ const firebaseConfig = {
   appId: "YOUR_APP_ID",
 };
 
-// Initialize Firebase only once
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }

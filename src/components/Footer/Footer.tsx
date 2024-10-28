@@ -1,4 +1,5 @@
-import { useRouter } from "next/router";
+"use client";
+import { useRouter } from "next/navigation";
 import React, { FC } from "react";
 interface Props {
   isVisible: boolean;
@@ -21,8 +22,6 @@ export const Footer: FC<Props> = ({
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      {/* <div className="w-full flex flex-row justify-between"> */}
-
       <button
         onClick={handleContactClick}
         className={`${fontColor} md:ml-16  select-none hover:scale-125 transition font-orbitron_variable`}
@@ -42,7 +41,6 @@ export const Footer: FC<Props> = ({
           Next JS
         </a>
       </div>
-      {/* </div> */}
     </footer>
   );
 };
