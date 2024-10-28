@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../src/components/footer/Footer";
 import NavigationBar from "../../src/components/navigation_bar/NavigationBar";
 import { NextPage } from "next";
 import Image from "next/image";
+import Footer from "@/components/footer/Footer";
 
 const SignIn: NextPage = () => {
   return (

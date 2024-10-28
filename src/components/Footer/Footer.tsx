@@ -13,7 +13,7 @@ const Footer: FC<Props> = ({
   const router = useRouter();
 
   const handleContactClick = () => {
-    router.push("/about-us?scrollTo=bottom");
+    router.push("/contact?scrollTo=bottom");
   };
   return (
     <footer
