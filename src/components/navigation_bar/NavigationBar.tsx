@@ -1,22 +1,22 @@
 import React, { FC } from "react";
-
+import Link from "next/link";
 const NavigationBar: FC = () => {
   return (
     <nav className="w-full bg-red-400 h-[100px] flex flex-row justify-evenly items-center">
       <div>
-        <a href="/">Home</a>
+        <Link href="/">Home</Link>
       </div>
       <div>
-        <a>Docs</a>
+        <Link href="/">Docs</Link>
       </div>
       <div>
-        <a>Informations</a>
+        <Link href="/">Informations</Link>
       </div>
       <div>
-        <a href="/contact">Contact</a>
+        <Link href="/contact">Contact</Link>
       </div>
       <div>
-        <a href="/sign-in">Sign In</a>
+        <Link href="/sign-in">Sign In</Link>
       </div>
     </nav>
   );
