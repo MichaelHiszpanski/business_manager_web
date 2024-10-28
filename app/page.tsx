@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/footer2/Footer";
 
 export default function Home() {
   return (
