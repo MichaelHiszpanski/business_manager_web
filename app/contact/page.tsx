@@ -1,5 +1,5 @@
 import { Footer } from "@/src/components/footer/Footer";
-import NavigationBar from "@/src/components/navigation_bar/NavigationBar";
+import NavigationBar from "../../src/components/navigation_bar/NavigationBar";
 import { NextPage } from "next";
 import Image from "next/image";
 
