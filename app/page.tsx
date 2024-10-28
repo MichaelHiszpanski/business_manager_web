@@ -1,4 +1,4 @@
-import { Footer } from "../src/components/footer/Footer";
+import Footer from "../src/components/footer/Footer";
 import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
 

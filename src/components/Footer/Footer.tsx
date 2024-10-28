@@ -6,7 +6,7 @@ interface Props {
   backgroudnColor?: string;
   fontColor?: string;
 }
-export const Footer: FC<Props> = ({
+const Footer: FC<Props> = ({
   isVisible,
   backgroudnColor = "bg-gradient-to-r from-colorFour to-colorThree",
   fontColor = "text-colorTwo",
@@ -44,3 +44,4 @@ export const Footer: FC<Props> = ({
     </footer>
   );
 };
+export default Footer;
