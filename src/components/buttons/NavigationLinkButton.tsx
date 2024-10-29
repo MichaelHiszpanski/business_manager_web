@@ -3,11 +3,14 @@ import Link from "next/link";
 interface Props {
   name: string;
   hrefLink: string;
+  className?: string;
 }
 
-const NavigationLinkButton: FC<Props> = ({ name, hrefLink }) => {
+const NavigationLinkButton: FC<Props> = ({ name, hrefLink, className }) => {
   return (
-    <div className=" rounded-xl font-bold hover:scale-110 ">
+    <div
+      className={` ${className} rounded-xl font-bold hover:scale-110 select-none`}
+    >
       <Link href={hrefLink}>{name}</Link>
     </div>
   );

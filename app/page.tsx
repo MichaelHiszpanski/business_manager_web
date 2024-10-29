@@ -15,29 +15,27 @@ export default function Home() {
   return (
     <main className="flex flex-col  min-h-screen w-full items-center sm:items-start bg-white relative">
       <NavigationBar />
-      <section className="w-full absolute flex-col my-[200px] ">
-        <div className="relative w-full h-[300px]">
+      <section className="flex  absolute flex-col my-[300px]  overflow-hidden rotate-45 md:rotate-0 w-[1100px] md:w-full">
+        <div className="relative w-full flex  h-full">
           <Image
             src={wave_up_two}
             alt="Next.js logo"
-            layout="fill"
-            objectFit="cover"
+            className="w-full h-full object-covert translate-y-[10px]"
             onDragStart={(e) => e.preventDefault()}
             onClick={(e) => e.preventDefault()}
           />
         </div>
-        <div className="relative w-full h-[300px]">
+        <div className="relative w-full flex h-full">
           <Image
             src={wave_down_three}
-            alt="bg"
-            layout="fill"
-            objectFit="cover"
+            alt="image"
+            className="object-cover w-full h-full "
             onDragStart={(e) => e.preventDefault()}
             onClick={(e) => e.preventDefault()}
           />
         </div>
       </section>
-      <section className="w-full mt-[300px] z-10 px-5 md:px-[100px] mb-[100px]">
+      <section className="w-full mt-[100px] md:mt-[300px] z-10 px-5 md:px-[100px] ">
         <GridWrapper columnGap="4">
           <ServiceCard
             width={serviceCardSettings.width}
@@ -75,7 +73,6 @@ export default function Home() {
             title="Service 3"
             content="Content 3"
           />
-          {/* Additional ServiceCards */}
         </GridWrapper>
       </section>
       <Footer

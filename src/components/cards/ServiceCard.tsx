@@ -20,8 +20,8 @@ const ServiceCard: FC<Props> = ({
                  flex-col overflow-hidden shadow-lg  transition-transform 
                  duration-300 ease-in-out hover:scale-110`}
     >
-      <div className="w-full h-[15%] flex  flex-col justify-center items-center font-bold text-2xl bg-colorTwo bg-opacity-70">
-        {title}
+      <div className="w-full h-[15%] flex  flex-col justify-center items-center font-bold text-2xl bg-colorTwo bg-opacity-70 font-permanentMarker">
+        {title} csassas
       </div>
       <div className="w-full h-full py-[10px] flex flex-col bg-colorEight bg-opacity-50">
         {content}
