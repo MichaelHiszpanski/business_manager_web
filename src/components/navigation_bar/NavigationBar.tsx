@@ -1,6 +1,6 @@
 "use client";
 import React, { FC } from "react";
-import { wave_one } from "@/consts/images";
+import { logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
@@ -10,17 +10,16 @@ const NavigationBar: FC = () => {
       <Image
         src={wave_one}
         alt="bg"
-        className="w-full absolute top-0 select-none"
+        className=" w-screen absolute top-[-60px]  select-none overflow-hidden"
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        // width={500}
-        // height={200}
         onDragStart={(e) => e.preventDefault()}
         onClick={(e) => e.preventDefault()}
       />
       <div className="flex flex-row justify-evenly items-center w-full h-full z-50">
+        <Image src={logo} alt="logo" className="w-24 h-24" />
         {navigationItems.map((element) => (
           <NavigationLinkButton
             key={element.name}

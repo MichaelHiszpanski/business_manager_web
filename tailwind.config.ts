@@ -20,7 +20,7 @@ const config: Config = {
         colorFour: "#D75404",
         colorFive: "#8A2C02",
         colorSix: "#77CBF0",
-        colorSeven: "#4FD100",
+        colorSeven: "#F0A5CB",
         colorEight: "#9FEDD7",
         black: "#000",
         white: "#ffffff",
