@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useState, useEffect, useRef } from "react";
+import React, { FC, useState, useRef } from "react";
 import { logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
