@@ -21,8 +21,8 @@ const SignUp: NextPage = () => {
     try {
       await signUp(email, password);
       console.log("User signed up successfully!");
-    } catch (error: any) {
-      console.error("Error signing up:", error.message);
+    } catch (error: unknown) {
+      console.error("Error signing up:", error);
     }
   };
 
