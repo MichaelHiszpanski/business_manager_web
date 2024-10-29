@@ -37,8 +37,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full mt-[300px] z-10 px-5 md:px-[100px]">
-        <GridWrapper gap="4">
+      <section className="w-full mt-[300px] z-10 px-5 md:px-[100px] mb-[100px]">
+        <GridWrapper columnGap="4">
           <ServiceCard
             width={serviceCardSettings.width}
             height={serviceCardSettings.height}
