@@ -2,6 +2,7 @@ import React from "react";
 import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
 import Footer from "@/components/footer2/Footer";
+import { wave_one } from "@/consts/images";
 
 export default function Home() {
   return (
@@ -17,6 +18,17 @@ export default function Home() {
           priority
         />
       </section>
+      {/* <Image
+        src={wave_one}
+        alt="bg"
+        className="w-full"
+        width={500}
+        height={200}
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      /> */}
 
       <Footer isVisible={true} />
     </main>

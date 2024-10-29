@@ -1,8 +1,16 @@
-import { auth } from "./firebase";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import app from "./firebase";
+
+const auth = getAuth(app);
 
 export const signUp = async (email, password) => {
   try {
-    await auth.createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(auth, email, password);
     console.log("User signed up successfully!");
   } catch (error) {
     console.error("Error signing up:", error.message);
@@ -11,16 +19,16 @@ export const signUp = async (email, password) => {
 
 export const signIn = async (email, password) => {
   try {
-    await auth.signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(auth, email, password);
     console.log("User signed in successfully!");
   } catch (error) {
     console.error("Error signing in:", error.message);
   }
 };
 
-export const signOut = async () => {
+export const logOut = async () => {
   try {
-    await auth.signOut();
+    await signOut(auth);
     console.log("User signed out successfully!");
   } catch (error) {
     console.error("Error signing out:", error.message);
