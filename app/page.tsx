@@ -2,7 +2,6 @@ import React from "react";
 import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
 import Footer from "@/components/footer2/Footer";
-import { wave_one } from "@/consts/images";
 
 export default function Home() {
   return (
