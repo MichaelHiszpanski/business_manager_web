@@ -15,6 +15,8 @@ const NavigationBar: FC = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
+        // width={500}
+        // height={200}
         onDragStart={(e) => e.preventDefault()}
         onClick={(e) => e.preventDefault()}
       />
