@@ -31,4 +31,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-Check out deployed projet: [http://business-manager-website-6f4lhpdv2-michaels-projects-6c44bb75.vercel.app]
+Check out deployed projet: [https://business-manager-website.vercel.app/]
