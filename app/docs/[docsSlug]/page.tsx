@@ -32,9 +32,9 @@ function getAllPosts() {
 export default async function VisaPage({
   params,
 }: {
-  params: { docsSlug: string };
+  params: Promise<{ docsSlug: string }>;
 }) {
-  const { docsSlug } = params;
+  const { docsSlug } = await params;
 
   const filePath = path.join(
     process.cwd(),
