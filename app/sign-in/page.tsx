@@ -6,18 +6,23 @@ import Footer from "@/components/footer2/Footer";
 import { signIn } from "@/firebase/auth";
 import CustomTextInput from "@/components/text_input/CustomTextInput";
 import Link from "next/dist/client/link";
+import { useRouter } from "next/navigation";
 
 const SignIn: NextPage = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      await signIn(email, password);
-      console.log("Login successful!");
-    } catch (error) {
-      console.error("Login failed:", error);
+    const result = await signIn(email, password);
+
+    if (result.success) {
+      router.push("/docs");
+    } else {
+      console.error("Login failed:", result.error);
+      setError(result.error ?? "An unexpected error occurred");
     }
   };
 
@@ -28,6 +33,7 @@ const SignIn: NextPage = () => {
         <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
           Sign In
         </h1>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
         <form
           onSubmit={handleLogin}
           className="flex flex-col items-center md:w-[600px] w-3/4
