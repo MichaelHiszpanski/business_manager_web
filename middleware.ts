@@ -5,7 +5,7 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
   console.log("Token from cookies:", token);
 
-  const signedUserPages = ["/docs"];
+  const signedUserPages = [""]; //"/docs"
 
   if (signedUserPages.includes(req.nextUrl.pathname)) {
     if (token == null) {
