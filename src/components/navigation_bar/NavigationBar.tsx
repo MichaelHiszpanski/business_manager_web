@@ -15,7 +15,7 @@ const NavigationBar: FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Track user authentication state
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const auth = getAuth(app);
 
   useEffect(() => {

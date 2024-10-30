@@ -5,7 +5,7 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "./firebase";
-import { setCookie } from "nookies";
+import { setCookie, destroyCookie } from "nookies";
 
 const auth = getAuth(app);
 
@@ -57,6 +57,7 @@ export const signIn = async (email, password) => {
 export const logOut = async () => {
   try {
     await signOut(auth);
+    destroyCookie(null, "token", { path: "/" });
     console.log("User signed out successfully!");
     return { success: true };
   } catch (error) {
