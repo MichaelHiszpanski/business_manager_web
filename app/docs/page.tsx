@@ -10,7 +10,6 @@ import fs from "fs";
 import matter from "gray-matter";
 
 const Docs: NextPage = ({}) => {
-  // const response: PostApiResponse = readVisaInfo();
   const dirPathToRead = path.join(process.cwd(), "documents/docs_md");
   const files = fs.readdirSync(dirPathToRead);
 
@@ -26,8 +25,9 @@ const Docs: NextPage = ({}) => {
   });
 
   return (
-    <section className="min-h-screen mt-[20px] flex flex-col items-center p-6 md:p-24 bg-gradient-to-r from-colorThree to-white">
-      <div className="container mb-24">
+    <section className="min-h-screen mt-[20px] flex flex-col items-center   bg-gradient-to-r from-colorThree to-white">
+      <NavigationBar />
+      <div className="container mb-24 z-50">
         <h1 className="text-5xl font-bold text-center text-colorFive mb-12">
           Sevices
         </h1>
