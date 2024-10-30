@@ -27,7 +27,7 @@ const Docs: NextPage = ({}) => {
   return (
     <section className="min-h-screen mt-[20px] flex flex-col items-center   bg-gradient-to-r from-colorThree to-white">
       <NavigationBar />
-      <div className="container mb-24 z-50">
+      <div className="container mb-24 z-30">
         <h1 className="text-5xl font-bold text-center text-colorFive mb-12">
           Sevices
         </h1>

@@ -60,7 +60,7 @@ export default async function VisaPage({
     <div className="flex  flex-col w-full items-center bg-gradient-to-r from-gray-400 to-slate-200 justify-center pb-24">
       <NavigationBar />
       <ServicesSideBar posts={posts} />
-      <div className="prose w-full bg-white p-5 z-50 mt-[100px]">
+      <div className="prose w-full bg-white p-5 z-30 mt-[100px]">
         <h1 className="font-semibold text-2xl py-5">{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>

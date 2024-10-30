@@ -41,7 +41,7 @@ const SignIn: NextPage = () => {
         <form
           onSubmit={handleLogin}
           className="flex flex-col items-center md:w-[600px] w-3/4
-           justify-center z-50 border border-gray-400 p-12 rounded-xl"
+           justify-center z-30 border border-gray-400 p-12 rounded-xl"
         >
           <CustomTextInput
             placeholder="Email"
