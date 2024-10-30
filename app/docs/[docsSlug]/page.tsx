@@ -15,8 +15,12 @@ interface VisaPageProps {
   };
 }
 
-export default async function VisaPage({ params }: VisaPageProps) {
-  const { docsSlug } = await params;
+export default async function VisaPage({
+  params,
+}: {
+  params: { docsSlug: string };
+}) {
+  const { docsSlug } = params;
 
   const filePath = path.join(
     process.cwd(),
