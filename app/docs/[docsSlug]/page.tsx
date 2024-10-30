@@ -29,10 +29,12 @@ function getAllPosts() {
   });
 }
 
-export default async function VisaPage(props: {
+export default async function VisaPage({
+  params,
+}: {
   params: { docsSlug: string };
 }) {
-  const { docsSlug } = props.params;
+  const { docsSlug } = params;
 
   const filePath = path.join(
     process.cwd(),
