@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
+## Dissertation Project for The Open University. - Website
+---
 ## Deploy on Vercel
 
 Check out deployed projet: [https://business-manager-website.vercel.app/]
@@ -6,6 +8,7 @@ Check out deployed projet: [https://business-manager-website.vercel.app/]
 ---
 ## Getting Started
 
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 First, run the development server:
 
 ```bash
