@@ -17,12 +17,12 @@ const SignIn: NextPage = () => {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const result = await signIn(email, password);
-    router.push("/docs");
+
     console.log("LOGIN SUCCESS 1");
     if (result.success) {
       console.log("LOGIN SUCCESS 2");
       setTimeout(() => {
-        router.push("/docs");
+        router.push("/contact");
       }, 100);
     } else {
       console.error("Login failed:", result.error);
