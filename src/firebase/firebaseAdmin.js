@@ -1,5 +1,4 @@
 import admin from "firebase-admin";
-import serviceAccount from "./business-manager-25393-firebase-adminsdk-vcjok-55aa5fd641.json";
 
 if (!admin.apps.length) {
   admin.initializeApp({
