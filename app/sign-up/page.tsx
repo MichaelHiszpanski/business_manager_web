@@ -79,13 +79,13 @@ const SignUp: NextPage = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="absolute top-1/8 left-[200px] w-[400px] h-[700px] rounded-full -rotate-45 bg-gradient-to-l from-colorSix to-colorSeven"
         style={{
           filter: "blur(28px)",
           opacity: "0.8",
         }}
-      ></div>
+      ></div> */}
       <Footer isVisible={true} backgroudnColor="from-colorSix to-colorSeven" />
     </div>
   );

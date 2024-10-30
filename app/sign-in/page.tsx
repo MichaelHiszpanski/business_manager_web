@@ -26,7 +26,7 @@ const SignIn: NextPage = () => {
       <NavigationBar />
       <div className="w-full h-full  flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
-          Sing In
+          Sign In
         </h1>
         <form
           onSubmit={handleLogin}
