@@ -13,7 +13,7 @@ export async function middleware(req: NextRequest) {
       return NextResponse.redirect(url);
     }
 
-    const response = await fetch(`${req.nextUrl.origin}/api/`, {
+    const response = await fetch(`${req.nextUrl.origin}/api/token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

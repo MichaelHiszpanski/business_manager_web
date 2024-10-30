@@ -1,15 +1,41 @@
 "use client";
-import React, { FC, useState, useRef } from "react";
+import React, { FC, useState, useRef, useEffect } from "react";
 import { logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
 import useOutsideClick from "../utils/useOutsideClick";
+import { signOut, getAuth } from "firebase/auth";
+import app from "@/firebase/firebase";
+import { useRouter } from "next/navigation";
 const NavigationBar: FC = () => {
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [error, setError] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Track user authentication state
+  const auth = getAuth(app);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setIsAuthenticated(!!user);
+    });
+    return unsubscribe;
+  }, [auth]);
+
+  const handleLogOut = async () => {
+    try {
+      await signOut(auth);
+      setIsAuthenticated(false);
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing out:", error);
+      setError("An unexpected error occurred while signing out.");
+    }
+  };
+
   return (
     <nav className="w-full relative h-[100px] flex flex-row justify-evenly items-center">
       <Image
@@ -39,6 +65,20 @@ const NavigationBar: FC = () => {
             className=" hidden md:flex"
           />
         ))}
+        {isAuthenticated ? (
+          <button
+            onClick={handleLogOut}
+            className="md:flex hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
+          >
+            Log Out
+          </button>
+        ) : (
+          <NavigationLinkButton
+            name="Sign In"
+            hrefLink="/sign-in"
+            className="md:flex hidden"
+          />
+        )}
       </div>
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -55,13 +95,18 @@ const NavigationBar: FC = () => {
                   hrefLink={element.hrefLink}
                 />
               ))}
+
+              {isAuthenticated ? (
+                <button
+                  onClick={handleLogOut}
+                  className="flex md:hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
+                >
+                  Log Out
+                </button>
+              ) : (
+                <NavigationLinkButton name="Sign In" hrefLink="/sign-in" />
+              )}
             </div>
-            {/* <button
-              onClick={() => setIsModalOpen(false)}
-              className="text-white bg-red-500 px-4 py-2 rounded"
-            >
-              Close
-            </button> */}
           </div>
         </div>
       )}

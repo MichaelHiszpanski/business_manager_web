@@ -1,10 +1,18 @@
+import Footer from "@/components/footer2/Footer";
+import NavigationBar from "@/components/navigation_bar/NavigationBar";
 import React, { FC } from "react";
 
 const Docs: FC = () => {
   return (
-    <div className=" min-h-screen w-full flex flex-col justify-center">
-      <div className="w-24 h-24 bg-red-400">sfdadvvad</div>
-    </div>
+    <main className=" min-h-screen  w-full ">
+      <NavigationBar />
+      <div className="w-24 h-24 bg-red-400 mb-[500px]">sfdadvvad</div>
+      <Footer
+        isVisible={true}
+        backgroudnColor="from-colorSix to-colorSeven"
+        fontColor="colorOne"
+      />
+    </main>
   );
 };
 

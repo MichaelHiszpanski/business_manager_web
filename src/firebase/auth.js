@@ -12,10 +12,9 @@ const auth = getAuth(app);
 export const signUp = async (email, password) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
-    console.log("User signed up successfully!");
+
     return { success: true };
   } catch (error) {
-    console.error("Error signing up:", error.message);
     return {
       success: false,
       error: "An error occurred. Please try again later.",
@@ -55,7 +54,11 @@ export const logOut = async () => {
   try {
     await signOut(auth);
     console.log("User signed out successfully!");
+    return { success: true };
   } catch (error) {
-    console.error("Error signing out:", error.message);
+    return {
+      success: false,
+      error: "An error occurred. Please try again later.",
+    };
   }
 };
