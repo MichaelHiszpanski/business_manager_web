@@ -22,7 +22,7 @@ const SignIn: NextPage = () => {
     if (result.success) {
       console.log("LOGIN SUCCESS 2");
       setTimeout(() => {
-        router.push("/contact");
+        router.push("/docs");
       }, 100);
     } else {
       console.error("Login failed:", result.error);

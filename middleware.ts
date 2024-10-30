@@ -8,7 +8,7 @@ export async function middleware(req: NextRequest) {
   const signedUserPages = ["/docs"];
 
   if (signedUserPages.includes(req.nextUrl.pathname)) {
-    if (!token) {
+    if (token == null) {
       const url = req.nextUrl.clone();
       url.pathname = "/sign-in";
       return NextResponse.redirect(url);
