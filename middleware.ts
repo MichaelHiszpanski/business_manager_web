@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
+  console.log("Token from cookies:", token);
 
   const signedUserPages = ["/docs"];
 

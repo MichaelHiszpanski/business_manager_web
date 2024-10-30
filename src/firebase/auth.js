@@ -31,7 +31,11 @@ export const signIn = async (email, password) => {
     );
     const user = userCredential.user;
     const token = await user.getIdToken();
-    setCookie(null, "token", token, { path: "/" });
+    setCookie(null, "token", token, {
+      path: "/",
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+    });
     return { success: true };
   } catch (error) {
     if (
