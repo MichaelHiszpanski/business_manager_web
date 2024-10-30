@@ -32,7 +32,7 @@ function getAllPosts() {
 export default async function VisaPage(props: {
   params: { docsSlug: string };
 }) {
-  const { docsSlug } = await props.params;
+  const { docsSlug } = props.params;
 
   const filePath = path.join(
     process.cwd(),
