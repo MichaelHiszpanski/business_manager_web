@@ -1,7 +1,7 @@
 ---
-title: Mobile App Development
+title: To Do List
 meta: Discover the world of mobile app development with React Native and Flutter. Learn about their features, benefits, and how to choose the right framework for your project.
-slug: mobile-app-development
+slug: to_do_list
 ---
 
 # Mobile App Development with React Native and Flutter

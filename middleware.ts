@@ -1,3 +1,4 @@
+import { verifyIdToken } from "@/firebase/firebaseAdmin";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
@@ -5,10 +6,10 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
   console.log("Token from cookies:", token);
 
-  const signedUserPages = [""]; //"/docs"
-
+  //const signedUserPages = ["/contact"]; //"/docs"
+  const signedUserPages = ["/contact"]; //"/contact", "/docs"
   if (signedUserPages.includes(req.nextUrl.pathname)) {
-    if (token == null) {
+    if (!token) {
       const url = req.nextUrl.clone();
       url.pathname = "/sign-in";
       return NextResponse.redirect(url);
@@ -35,5 +36,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/docs"],
+  matcher: ["/contact"], //"/docs", "/contact"
 };
