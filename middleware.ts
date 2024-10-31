@@ -7,7 +7,7 @@ export async function middleware(req: NextRequest) {
   console.log("Token from cookies:", token);
 
   //const signedUserPages = ["/contact"]; //"/docs"
-  const signedUserPages = ["/contact"]; //"/contact", "/docs"
+  const signedUserPages = ["/xxx"]; //"/contact", "/docs"
   if (signedUserPages.includes(req.nextUrl.pathname)) {
     if (!token) {
       const url = req.nextUrl.clone();
@@ -36,5 +36,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/contact"], //"/docs", "/contact"
+  matcher: ["/xxx"], //"/docs", "/contact"
 };
