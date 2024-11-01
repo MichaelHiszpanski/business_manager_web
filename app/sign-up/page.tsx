@@ -46,7 +46,7 @@ const SignUp: NextPage = () => {
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <form
           onSubmit={handleSignUp}
-          className="flex flex-col items-center md:w-[600px] w-3/4 z-30 border justify-center border-gray-400 p-12 rounded-xl"
+          className="flex flex-col items-center md:w-[600px] w-[90%] z-30 md:border justify-center md:border-gray-400 p-2 md:p-12 rounded-xl"
         >
           <CustomTextInput
             placeholder="Email"
@@ -72,7 +72,7 @@ const SignUp: NextPage = () => {
           />
           <button
             type="submit"
-            className="bg-blue-500 md:w-full  bw-3/4 text-white px-4 py-2 rounded mt-2 font-orbitron_variable font-bold"
+            className="bg-blue-500 md:w-full  w-full text-white  p-2 md:p-4 rounded mt-2 font-orbitron_variable font-bold"
           >
             Sign Up
           </button>

@@ -21,6 +21,7 @@
     "nookies": "^2.5.2",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-responsive": "^10.0.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "stream-browserify": "^3.0.0"

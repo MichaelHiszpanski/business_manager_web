@@ -8,6 +8,7 @@ import useOutsideClick from "../utils/useOutsideClick";
 import { signOut, getAuth } from "firebase/auth";
 import app from "@/firebase/firebase";
 import { useRouter } from "next/navigation";
+import { useMediaQuery } from "react-responsive";
 const NavigationBar: FC = () => {
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,6 +18,8 @@ const NavigationBar: FC = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const auth = getAuth(app);
+
+  const isMobileSize = useMediaQuery({ maxWidth: 767 });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -54,7 +57,11 @@ const NavigationBar: FC = () => {
           src={logo}
           alt="logo"
           className="w-24 h-24 cursor-pointer select-none"
-          onClick={() => setIsModalOpen(!isModalOpen)}
+          onClick={() => {
+            if (isMobileSize) {
+              setIsModalOpen(!isModalOpen);
+            }
+          }}
         />
 
         {navigationItems.map((element) => (
