@@ -36,14 +36,17 @@ const Docs: NextPage = ({}) => {
             <Link
               href={`docs/${post.slug}`}
               key={post?.title}
-              className=" p-8 rounded-md shadow-md bg-neutral-200"
+              className=" p-8 rounded-md shadow-md bg-neutral-200 relative"
             >
               <h3 className=" text-xl font-semibold text-black font-orbitron_variable">
                 {post.title}
               </h3>
               {/* <p className=" mt-4 text-sm text-gray-700">{post.slug}</p> */}
-              <p className=" mt-4 text-sm text-gray-500 font-mono">
+              <p className=" mt-4 text-sm text-gray-500 font-mono mb-2">
                 {post.meta}
+              </p>
+              <p className=" absolute bottom-2 right-8 font-orbitron_variable text-sm">
+                Read more...
               </p>
             </Link>
           ))}
