@@ -25,10 +25,10 @@ const Docs: NextPage = ({}) => {
   });
 
   return (
-    <section className="min-h-screen  flex flex-col items-center   bg-gradient-to-r from-colorThree to-white">
+    <section className="min-h-screen  flex flex-col items-center   bg-gradient-to-r from-colorThree to-white ">
       <NavigationBar />
-      <div className="container mb-24 z-30">
-        <h1 className="text-5xl font-bold text-center text-colorFive mb-12">
+      <div className="container mb-24 z-30 w-full px-4">
+        <h1 className="text-5xl font-bold text-center text-colorFive my-12 font-orbitron_variable">
           Sevices
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -36,13 +36,15 @@ const Docs: NextPage = ({}) => {
             <Link
               href={`docs/${post.slug}`}
               key={post?.title}
-              className=" p-8 rounded-md shadow-md bg-white"
+              className=" p-8 rounded-md shadow-md bg-neutral-200"
             >
-              <h3 className=" text-xl font-semibold text-black">
+              <h3 className=" text-xl font-semibold text-black font-orbitron_variable">
                 {post.title}
               </h3>
-              <p className=" mt-4 text-sm text-gray-700">{post.slug}</p>
-              <p className=" mt-4 text-sm text-gray-500">{post.meta}</p>
+              {/* <p className=" mt-4 text-sm text-gray-700">{post.slug}</p> */}
+              <p className=" mt-4 text-sm text-gray-500 font-mono">
+                {post.meta}
+              </p>
             </Link>
           ))}
         </div>
