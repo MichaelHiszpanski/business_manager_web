@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { FC } from "react";
 interface Props {
@@ -18,7 +19,7 @@ const Footer: FC<Props> = ({
   };
   return (
     <footer //
-      className={` bottom-0 left-0 w-full h-[85px] flex flex-col md:flex-row 
+      className={`fixed bottom-0 left-0 w-full h-[85px] flex flex-col md:flex-row 
                 items-center bg-gradient-to-r  ${backgroudnColor} justify-center md:justify-between 
                  text-[#808A9D] dark:text-darkSecondary z-40 transition-opacity duration-300 ${
                    isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -30,9 +31,13 @@ const Footer: FC<Props> = ({
       >
         Contact
       </button>
-      <p className={`${fontColor} select-none font-jost_variable"`}>
+      <Link
+        className={`${fontColor} select-none font-jost_variable"`}
+        href={"https://dungeon-studio.vercel.app/"}
+        target="_blank"
+      >
         © 2024 Dungeon Studio. All rights reserved.
-      </p>
+      </Link>
       <div className=" flex justify-center md:mr-16">
         <a
           href="https://nextjs.org/"
