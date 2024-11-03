@@ -62,8 +62,13 @@ export default async function VisaPage({
       <ServicesSideBar posts={posts} />
       <div className="w-full flex flex-col md:px-80 px-4">
         <div className="prose w-full md:max-w-none bg-white p-5 z-30 mt-[100px]  rounded-xl shadow-xl">
-          <h1 className="font-semibold text-2xl py-5">{frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          <h1 className="font-semibold text-2xl py-5 select-none">
+            {frontmatter.title}
+          </h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+            className=" select-none"
+          />
         </div>
       </div>
     </div>
