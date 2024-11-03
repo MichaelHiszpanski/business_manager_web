@@ -10,3 +10,4 @@ export const logo = require("/assets/icons/logo.svg");
 export const flutterLogoOne = require("assets/images/flutter1.jpeg");
 export const flutterLogoTwo = require("assets/images/flutter2.png");
 export const googlePlayLogo = require("assets/images/gplayone.png");
+export const googlePlayLogo2 = require("assets/images/play2.png");

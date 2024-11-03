@@ -8,12 +8,13 @@ import {
   wave_up_two,
   flutterLogoOne,
   flutterLogoTwo,
-  googlePlayLogo,
+  googlePlayLogo2,
 } from "@/consts/images";
 import GridWrapper from "@/components/wrappers/grid_wrapper";
 import ServiceCard from "@/components/cards/ServiceCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 export default function Home() {
   const serviceCardSettings = {
     width: "w-[300px]",
@@ -122,7 +123,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[400px] text-black line-clamp-7 bg-colorThree bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono"
+          className="md:w-[600px] text-black line-clamp-7 bg-colorSeven bg-opacity-20 p-2 rounded-xl md:ml-[50%] font-mono"
         >
           Running a business is challenging, but managing it doesn't have to be.
           Every day brings new challenges that consume your precious time.
@@ -134,28 +135,45 @@ export default function Home() {
           What You’ll Love About Our App
         </h2>
 
-        <div
-          data-aos="fade-right"
-          data-aos-offset="500"
-          data-aos-easing="ease-in-sine"
-          className="md:w-[400px] text-black line-clamp-7 bg-colorThree bg-opacity-20 p-2 rounded-xl md:ml-[40%] font-mono "
-        >
-          Effortless Task Management: Stay on top of your to-do list and never
-          miss a deadline with intuitive task prioritization and reminders.
-          Professional Invoicing Made Easy: Generate, send, and track invoices
-          quickly, helping you stay on top of your finances. Seamless Contact
-          Management: Keep all client and team information in one secure place,
-          making communication simple and efficient. HR Essentials: Manage
-          employee information, track roles, and streamline hiring to support
-          your growing team. Integrated Calendar: Plan, schedule, and view
-          upcoming tasks or events by day, week, or month for better
-          organization.
+        <div className="md:w-[800px] text-black line-clamp-7 bg-colorSix bg-opacity-20 p-2 md:p-5 rounded-xl md:ml-[10%] font-mono ">
+          <div className="space-y-4 text-gray-800">
+            <p className="text-lg font-semibold">Key Features:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <span className="font-bold">Effortless Task Management:</span>{" "}
+                Stay on top of your to-do list and never miss a deadline with
+                intuitive task prioritization and reminders.
+              </li>
+              <li>
+                <span className="font-bold">
+                  Professional Invoicing Made Easy:
+                </span>
+                Generate, send, and track invoices quickly, helping you stay on
+                top of your finances.
+              </li>
+              <li>
+                <span className="font-bold">Seamless Contact Management:</span>{" "}
+                Keep all client and team information in one secure place, making
+                communication simple and efficient.
+              </li>
+              <li>
+                <span className="font-bold">HR Essentials:</span> Manage
+                employee information, track roles, and streamline hiring to
+                support your growing team.
+              </li>
+              <li>
+                <span className="font-bold">Integrated Calendar:</span> Plan,
+                schedule, and view upcoming tasks or events by day, week, or
+                month for better organization.
+              </li>
+            </ul>
+          </div>
         </div>
         <div
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[400px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono"
+          className="md:w-[500px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5"
         >
           Why Choose Our App? Designed specifically for small businesses, our
           app combines simplicity and power, giving you the tools to handle
@@ -167,12 +185,27 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[400px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono mb-[100px]"
+          className="md:w-[700px] text-black line-clamp-7 bg-colorEight bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5"
         >
           Get Started Today Start using the Business Manager app to experience
           smoother workflows, better productivity, and a more organized business
           life. Join a community of small business owners who are transforming
           how they manage their operations.
+        </div>
+        <div className="flex flex-col  md:flex-row mb-[100px] items-center w-full justify-center my-10">
+          <p className=" font-orbitron_variable text-xl text-black md:my-0 my-2">
+            Download the application from
+          </p>
+          <Link
+            href="https://play.google.com/store/games?hl=en"
+            target="_blank"
+          >
+            <Image
+              alt="google_play"
+              src={googlePlayLogo2}
+              className="w-[200px] h-[50px] overflow-hidden rounded-lg ml-5 cursor-pointer shadow-lg"
+            />
+          </Link>
         </div>
       </div>
       {/* <section className="w-full mt-[100px] md:mt-[300px] z-10 px-5 md:px-[100px] ">
