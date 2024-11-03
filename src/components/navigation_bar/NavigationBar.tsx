@@ -88,13 +88,13 @@ const NavigationBar: FC = () => {
         )}
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
           <div
-            className="bg-white w-[300px] rounded-xl shadow-sm p-2 h-[300px]"
+            className="bg-gradient-to-r from-colorSix to-colorSeven w-[250px] rounded-full justify-center items-center flex flex-col shadow-sm  h-[250px] mt-[100px] "
             ref={navRef}
           >
-            <div className="flex flex-col justify-center items-center text-black">
-              <h2 className="text-lg font-bold mb-2 text-black">Navigation</h2>
+            <div className="flex flex-col justify-center items-center text-black ">
+              {/* <h2 className="text-lg font-bold mb-2 text-black">Navigation</h2> */}
               {navigationItems.map((element) => (
                 <NavigationLinkButton
                   key={element.name}

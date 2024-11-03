@@ -43,7 +43,7 @@ export default function Home() {
             onClick={(e) => e.preventDefault()}
             style={{
               filter: "blur(8px)",
-              opacity: "0.8",
+              opacity: "0.3",
             }}
           />
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
             onClick={(e) => e.preventDefault()}
             style={{
               filter: "blur(8px)",
-              opacity: "0.8",
+              opacity: "0.3",
               // transform: "rotate(45deg) scale(1.5)",
             }}
           />
@@ -75,7 +75,7 @@ export default function Home() {
             onClick={(e) => e.preventDefault()}
             style={{
               filter: "blur(8px)",
-              opacity: "0.3",
+              opacity: "0.4",
               // transform: "rotate(45deg) scale(1.5)",
             }}
           />
@@ -89,13 +89,13 @@ export default function Home() {
             onClick={(e) => e.preventDefault()}
             style={{
               filter: "blur(8px)",
-              opacity: "0.3",
+              opacity: "0.4",
             }}
           />
         </div>
       </section>
-      <div className="w-full flex flex-col">
-        <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold text-center w-full my-10">
+      <div className="w-full flex flex-col px-5">
+        <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold text-center w-full my-10 ">
           Business Manager
         </h2>
         <div className="flex md:flex-row items-center flex-col-reverse md:px-[200px] my-12">
@@ -110,7 +110,7 @@ export default function Home() {
             <h4 className="w-full text-center font-permanentMarker my-10 text-2xl">
               Your All-in-One Business Management Solution
             </h4>
-            <div className="line-clamp-7  text-black font-mono md:px-24">
+            <div className="line-clamp-7  md:text-black text-colorFive font-mono md:px-24">
               Welcome to Your All-in-One Business Management Solution Running a
               business is challenging, but managing it doesn’t have to be. With
               our Business Manager app, streamline your daily operations, keep

@@ -27,10 +27,10 @@ const Contact: NextPage = () => {
     return null;
   }
   return (
-    <div className="w-full justify-center flex flex-col items-center">
+    <div className="w-full justify-center flex flex-col items-center bg-colorEight">
       <NavigationBar />
-      <div className="w-full min-h-screen bg-colorSeven"></div>
-      <Footer isVisible={true} />
+      <div className="w-full min-h-screen "></div>
+      <Footer isVisible={true} backgroudnColor="from-colorSix to-colorSeven" />
     </div>
   );
 };
