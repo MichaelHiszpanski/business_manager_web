@@ -45,7 +45,7 @@ const Docs: NextPage = ({}) => {
               <p className=" mt-4 text-sm text-gray-500 font-mono mb-2">
                 {post.meta}
               </p>
-              <p className=" absolute bottom-2 right-8 font-orbitron_variable text-sm">
+              <p className=" absolute bottom-2 right-8 font-orbitron_variable text-sm text-black">
                 Read more...
               </p>
             </Link>
