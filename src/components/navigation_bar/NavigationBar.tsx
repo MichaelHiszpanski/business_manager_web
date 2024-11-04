@@ -4,7 +4,7 @@ import { logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
-import useOutsideClick from "../utils/useOutsideClick";
+import useOutsideClick from "../../utils/tools/useOutsideClick";
 import { signOut, getAuth } from "firebase/auth";
 import app from "@/firebase/firebase";
 import { useRouter } from "next/navigation";

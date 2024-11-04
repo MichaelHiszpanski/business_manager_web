@@ -5,7 +5,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/navigation";
 import { getAuth } from "firebase/auth";
 import app from "@/firebase/firebase";
-import Footer from "@/components/footer2/Footer";
+import Footer from "@/components/footer/Footer";
 
 const Contact: NextPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

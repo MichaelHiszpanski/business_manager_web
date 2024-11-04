@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import NavigationBar from "../../src/components/navigation_bar/NavigationBar";
 import { NextPage } from "next";
-import Footer from "@/components/footer2/Footer";
+import Footer from "@/components/footer/Footer";
 import { signUp } from "@/firebase/auth";
-import CustomTextInput from "@/components/text_input/CustomTextInput";
+import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

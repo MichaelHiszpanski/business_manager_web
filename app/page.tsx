@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
-import Footer from "@/components/footer2/Footer";
+import Footer from "@/components/footer/Footer";
 import {
   wave_down_three,
   wave_up_two,
@@ -10,7 +10,7 @@ import {
   flutterLogoTwo,
   googlePlayLogo2,
 } from "@/consts/images";
-import GridWrapper from "@/components/wrappers/grid_wrapper";
+import GridWrapper from "@/utils/wrappers/grid_wrapper";
 import ServiceCard from "@/components/cards/ServiceCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </section>
       <div className="w-full flex flex-col px-5">
-        <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold text-center w-full my-10 ">
+        <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold text-center w-full my-10 text-black ">
           Business Manager
         </h2>
         <div className="flex md:flex-row items-center flex-col-reverse md:px-[200px] my-12">
@@ -107,7 +107,7 @@ export default function Home() {
             className="w-1/2 overflow-hidden rounded-xl shadow-xl"
           />
           <div className="flex flex-col w-full">
-            <h4 className="w-full text-center font-permanentMarker my-10 text-2xl">
+            <h4 className="w-full text-center font-permanentMarker my-10 text-2xl text-black">
               Your All-in-One Business Management Solution
             </h4>
             <div className="line-clamp-7  md:text-black text-colorFive font-mono md:px-24">
@@ -115,7 +115,7 @@ export default function Home() {
               business is challenging, but managing it doesn’t have to be. With
               our Business Manager app, streamline your daily operations, keep
               everything organized, and save time to focus on what truly
-              matters—growing your business. What You’ll Love About Our App
+              matters—growing your business.
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
           operations, better organize and stay in order, save your valuable time
           and focus on what you consider important.
         </p>
-        <h2 className="w-full text-center font-orbitron_variable md:text-4xl text-3xl my-10">
+        <h2 className="w-full text-center font-orbitron_variable md:text-4xl text-3xl my-10 text-black">
           What You’ll Love About Our App
         </h2>
 
@@ -193,7 +193,7 @@ export default function Home() {
           how they manage their operations.
         </div>
         <div className="flex flex-col  md:flex-row mb-[100px] items-center w-full justify-center my-10">
-          <p className=" font-orbitron_variable text-xl text-black md:my-0 my-2">
+          <p className=" font-orbitron_variable text-lg md:text-xl text-black md:my-0 my-2">
             Download the application from
           </p>
           <Link

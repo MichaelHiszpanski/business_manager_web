@@ -1,9 +1,7 @@
-import Footer from "@/components/footer2/Footer";
-import type { InferGetStaticPropsType, GetStaticProps, NextPage } from "next";
+import Footer from "@/components/footer/Footer";
+import type { NextPage } from "next";
 import NavigationBar from "@/components/navigation_bar/NavigationBar";
-import React, { FC } from "react";
-import { PostApiResponse } from "@/consts/types/post";
-import { readVisaInfo } from "@/utils/helpers/visa_helper";
+import React from "react";
 import Link from "next/link";
 import path from "path";
 import fs from "fs";
@@ -52,6 +50,7 @@ const Docs: NextPage = ({}) => {
           ))}
         </div>
       </div>
+      <Footer isVisible={false} />
     </section>
   );
 };
