@@ -104,7 +104,7 @@ export default function Home() {
             onClick={(e) => e.preventDefault()}
             alt="flutter_logo"
             src={flutterLogoOne}
-            className="w-1/2 overflow-hidden rounded-xl shadow-xl"
+            className="md:w-1/2 w-full overflow-hidden rounded-xl shadow-xl mt-5 md:mt-0"
           />
           <div className="flex flex-col w-full">
             <h4 className="w-full text-center font-permanentMarker my-10 text-2xl text-black">
