@@ -58,7 +58,6 @@ export default async function VisaPage({
 
   return (
     <div className=" w-full items-center bg-gradient-to-r from-gray-400 to-slate-200 justify-center pb-24">
-      <NavigationBar />
       <ServicesSideBar posts={posts} />
       <div className="w-full flex flex-col md:px-80 px-4">
         <div className="prose w-full md:max-w-none bg-white p-5 z-30 mt-[100px]  rounded-xl shadow-xl">

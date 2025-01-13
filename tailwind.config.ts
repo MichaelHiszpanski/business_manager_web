@@ -38,6 +38,9 @@ const config: Config = {
         orbitron_variable: ["Orbitron-Variable", "sans-serif"],
         permanentMarker: ["PermanentMarker", "sans-serif"],
       },
+      padding: {
+        navPadding: "150px",
+      },
     },
   },
   plugins: [typography],

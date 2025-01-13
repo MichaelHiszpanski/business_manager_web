@@ -26,10 +26,9 @@ export default function Home() {
 
   return (
     <main
-      className="flex flex-col w-full  min-h-screen items-center sm:items-start
-     bg-white relative border border-blac"
+      className="flex pt-navPadding flex-col w-full  h-full items-center sm:items-start
+     bg-white "
     >
-      <NavigationBar />
       <section
         className=" absolute top-80 flex-col  md:hidden
         md:rotate-0 w-full md:w-full overflow-hidden  left-1/2 -translate-x-1/2"
@@ -253,11 +252,6 @@ export default function Home() {
           />
         </GridWrapper>
       </section> */}
-      <Footer
-        isVisible={true}
-        backgroudnColor="from-colorSix to-colorSeven"
-        // fontColor="colorOne"
-      />
     </main>
   );
 }

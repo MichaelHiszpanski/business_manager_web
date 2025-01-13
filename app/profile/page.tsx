@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/supabase/supabaseClient";
 
-const Contact: NextPage = () => {
+const Profile: NextPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const router = useRouter();
 
@@ -46,4 +46,4 @@ const Contact: NextPage = () => {
   );
 };
 
-export default Contact;
+export default Profile;

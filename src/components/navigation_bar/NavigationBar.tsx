@@ -6,9 +6,11 @@ import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
 import useOutsideClick from "../../utils/tools/useOutsideClick";
 import { signOut, getAuth } from "firebase/auth";
-import app from "@/firebase/firebase";
+// import app from "@/firebase/firebase";
 import { useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
+import { supabase } from "@/supabase/supabaseClient";
+import UserButton from "@/supabase/UserButton";
 const NavigationBar: FC = () => {
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,21 +18,47 @@ const NavigationBar: FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
 
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const auth = getAuth(app);
+
+  // const isMobileSize = useMediaQuery({ maxWidth: 767 });
+
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     setIsAuthenticated(!!user);
+  //   });
+  //   return unsubscribe;
+  // }, [auth]);
+
+  // const handleLogOut = async () => {
+  //   try {
+  //     await signOut(auth);
+  //     setIsAuthenticated(false);
+  //     router.push("/");
+  //   } catch (error) {
+  //     console.error("Error signing out:", error);
+  //     setError("An unexpected error occurred while signing out.");
+  //   }
+  // };
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const auth = getAuth(app);
 
   const isMobileSize = useMediaQuery({ maxWidth: 767 });
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setIsAuthenticated(!!user);
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      setIsAuthenticated(!!session?.user);
     });
-    return unsubscribe;
-  }, [auth]);
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   const handleLogOut = async () => {
     try {
-      await signOut(auth);
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+
       setIsAuthenticated(false);
       router.push("/");
     } catch (error) {
@@ -40,7 +68,7 @@ const NavigationBar: FC = () => {
   };
 
   return (
-    <nav className="w-full relative h-[100px] flex flex-row justify-evenly items-center">
+    <nav className="w-full z-50 fixed top-0  h-[100px] flex flex-row justify-evenly items-center">
       <Image
         src={wave_one}
         alt="bg"
@@ -73,12 +101,13 @@ const NavigationBar: FC = () => {
           />
         ))}
         {isAuthenticated ? (
-          <button
-            onClick={handleLogOut}
-            className="md:flex hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
-          >
-            Log Out
-          </button>
+          // <button
+          //   onClick={handleLogOut}
+          //   className="md:flex hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
+          // >
+          //   Log Out
+          // </button>
+          <UserButton />
         ) : (
           <NavigationLinkButton
             name="Sign In"
@@ -104,12 +133,13 @@ const NavigationBar: FC = () => {
               ))}
 
               {isAuthenticated ? (
-                <button
-                  onClick={handleLogOut}
-                  className="flex md:hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
-                >
-                  Log Out
-                </button>
+                // <button
+                //   onClick={handleLogOut}
+                //   className="flex md:hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
+                // >
+                //   Log Out
+                // </button>
+                <UserButton />
               ) : (
                 <NavigationLinkButton name="Sign In" hrefLink="/sign-in" />
               )}

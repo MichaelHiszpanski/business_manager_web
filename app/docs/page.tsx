@@ -23,8 +23,7 @@ const Docs: NextPage = ({}) => {
   });
 
   return (
-    <section className="min-h-screen  flex flex-col items-center   bg-gradient-to-r from-colorThree to-white ">
-      <NavigationBar />
+    <section className="min-h-screen pt-navPadding  flex flex-col items-center   bg-gradient-to-r from-colorThree to-white ">
       <div className="container mb-24 z-30 w-full px-4">
         <h1 className="text-5xl font-bold text-center text-colorFive my-12 font-orbitron_variable">
           Sevices
@@ -39,7 +38,6 @@ const Docs: NextPage = ({}) => {
               <h3 className=" text-xl font-semibold text-black font-orbitron_variable">
                 {post.title}
               </h3>
-              {/* <p className=" mt-4 text-sm text-gray-700">{post.slug}</p> */}
               <p className=" mt-4 text-sm text-gray-500 font-mono mb-2">
                 {post.meta}
               </p>
@@ -50,7 +48,7 @@ const Docs: NextPage = ({}) => {
           ))}
         </div>
       </div>
-      <Footer isVisible={false} />
+      {/* <Footer isVisible={false} /> */}
     </section>
   );
 };

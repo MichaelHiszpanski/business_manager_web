@@ -1,74 +1,129 @@
 "use client";
 import React, { useState } from "react";
-import NavigationBar from "../../src/components/navigation_bar/NavigationBar";
 import { NextPage } from "next";
-import Footer from "@/components/footer/Footer";
-import { signUp } from "@/firebase/auth";
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signUp } from "@/supabase/supabaseAuth";
 
 const SignUp: NextPage = () => {
   const router = useRouter();
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState<string>("");
-  const [error, setError] = useState<string | null>(null);
-  const handleSignUp = async (e: React.FormEvent) => {
+
+  const [apiError, setApiError] = useState<string | null>(null);
+
+  const [userData, setUserData] = useState<any>({
+    email: "",
+    password: "",
+    passwordConfirm: "",
+  });
+  const [errors, setErrors] = useState<any>({
+    email: "",
+    password: "",
+    passwordConfirm: "",
+  });
+
+  const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (password !== confirmPassword) {
-      console.error("Passwords do not match");
-      return;
+    if (!validateInputs()) return;
+
+    const result = await signUp(userData.email, userData.password);
+
+    if (result.success) {
+      console.log("Sign-up successful!");
+      router.push("/docs");
+    } else {
+      console.error("Sign-up failed:", result.error ?? "Unknown error");
+      setApiError(
+        result.error || "An unexpected error occurred. Please try again."
+      );
+    }
+  };
+
+  const validateInputs = () => {
+    let isValid = true;
+    const errorsList: any = {};
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(userData.email)) {
+      errorsList.email = "Please enter a valid email address.";
+      isValid = false;
+    } else if (userData.email.trim() === "") {
+      errorsList.email = "Email address cannot be empty.";
+      isValid = false;
     }
 
-    try {
-      const result = await signUp(email, password);
-      if (result.success) {
-        router.push("/docs");
-      } else {
-        console.error("Login failed:", result.error);
-        setError(result.error ?? "An unexpected error occurred");
-      }
-      console.log("User signed up successfully!");
-    } catch (error: unknown) {
-      console.error("Error signing up:", error);
+    if (userData.password.trim() === "") {
+      errorsList.password = "Password cannot be empty.";
+      isValid = false;
+    }
+
+    if (userData.passwordConfirm.trim() === "") {
+      errorsList.passwordConfirm = "Confirm password cannot be empty.";
+      isValid = false;
+    } else if (userData.passwordConfirm !== userData.password) {
+      errorsList.passwordConfirm =
+        "Your confirmation password has to match a password";
+      isValid = false;
+    }
+
+    setErrors(errorsList);
+    return isValid;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setUserData((prev: any) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    if (errors[name]) {
+      setErrors((prev: any) => ({ ...prev, [name]: "" }));
     }
   };
 
   return (
     <div className="w-full  flex flex-col items-center h-screen relative">
-      <NavigationBar />
       <div className="w-full h-full  flex flex-col items-center justify-center ">
         <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
           Sign Up
         </h1>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {apiError && <p className="text-red-500 mb-4">{apiError}</p>}
         <form
           onSubmit={handleSignUp}
           className="flex flex-col items-center md:w-[600px] w-[90%] z-30 md:border justify-center md:border-gray-400 p-2 md:p-12 rounded-xl"
         >
           <CustomTextInput
             placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={userData.email}
+            name="email"
+            onChange={handleInputChange}
             borderColor="border-colorSeven"
+            label={"Email"}
+            error={errors.email}
           />
 
           <CustomTextInput
             type="password"
             placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={userData.password}
+            onChange={handleInputChange}
             borderColor="border-colorSeven"
+            name={"password"}
+            label={"Password"}
+            error={errors.password}
           />
 
           <CustomTextInput
             type="password"
             placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={userData.passwordConfirm}
+            onChange={handleInputChange}
             borderColor="border-colorSeven"
+            name="passwordConfirm"
+            label={"Confirm Password"}
+            error={errors.passwordConfirm}
           />
           <button
             type="submit"
@@ -87,15 +142,6 @@ const SignUp: NextPage = () => {
           </Link>
         </div>
       </div>
-
-      {/* <div
-        className="absolute top-1/8 left-[200px] w-[400px] h-[700px] rounded-full -rotate-45 bg-gradient-to-l from-colorSix to-colorSeven"
-        style={{
-          filter: "blur(28px)",
-          opacity: "0.8",
-        }}
-      ></div> */}
-      <Footer isVisible={true} backgroudnColor="from-colorSix to-colorSeven" />
     </div>
   );
 };
