@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import NavigationBar from "../../src/components/navigation_bar/NavigationBar";
 import { NextPage } from "next";
 
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
