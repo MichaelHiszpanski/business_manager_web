@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.47.13",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/typography": "^0.5.15",
     "aos": "^3.0.0-beta.6",
