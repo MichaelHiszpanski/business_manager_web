@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -36,6 +37,7 @@ export default function RootLayout({
           isVisible={true}
           backgroudnColor="from-colorSix to-colorSeven"
         />
+        <Analytics />
       </body>
     </html>
   );
