@@ -148,55 +148,81 @@
 
 // export default ResetPassword;
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 import { resetPassword } from "@/supabase/supabaseAuth";
+import { supabase } from "@/supabase/supabaseClient";
+import { useRouter } from "next/navigation";
 
 const ResetPassword: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const router = useRouter();
 
-  const handleReset = async (e: React.FormEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    const params = new URLSearchParams(hash.substring(1)); // Extract parameters after `#`
+    const accessToken = params.get("access_token");
+
+    if (!accessToken) {
+      setError("Invalid or missing token.");
+    } else {
+      // Optionally store the token in state if needed
+      console.log("Access token retrieved:", accessToken);
+    }
+  }, []);
+
+  const handlePasswordReset = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!email) {
-      setError("Email is required.");
+    if (!newPassword) {
+      setError("Password cannot be empty.");
       return;
     }
 
-    const result = await resetPassword(email);
-    if (result.success) {
-      setMessage("Password reset link has been sent to your email.");
-      setError("");
+    const hash = window.location.hash;
+    const params = new URLSearchParams(hash.substring(1));
+    const accessToken = params.get("access_token");
+
+    if (!accessToken) {
+      setError("Invalid or missing token.");
+      return;
+    }
+
+    const { error } = await supabase.auth.updateUser({
+      password: newPassword,
+    });
+
+    if (error) {
+      setError(error.message);
     } else {
-      setError(result.error?.message || "An error occurred. Please try again.");
-      setMessage("");
+      setMessage("Password reset successful! Redirecting...");
+      setTimeout(() => router.push("/sign-in"), 3000);
     }
   };
 
   return (
     <div className="w-full flex flex-col items-center h-screen pt-[300px]">
       <h1 className="text-2xl font-bold mb-4">Reset Password</h1>
+      {message && <p className="text-green-500">{message}</p>}
+      {error && <p className="text-red-500">{error}</p>}
       <form
-        onSubmit={handleReset}
+        onSubmit={handlePasswordReset}
         className="w-[90%] max-w-md p-4 border rounded z-50"
       >
-        {message && <p className="text-green-500">{message}</p>}
-        {error && <p className="text-red-500">{error}</p>}
-        <CustomTextInput
-          name="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          borderColor="border-colorSeven"
-          label="Email"
+        <input
+          type="password"
+          placeholder="Enter your new password"
+          value={newPassword}
+          onChange={(e) => setNewPassword(e.target.value)}
+          className="border p-2 w-full rounded"
         />
         <button
           type="submit"
           className="bg-blue-500 text-white w-full py-2 rounded mt-4"
         >
-          Send Reset Link
+          Reset Password
         </button>
       </form>
     </div>
