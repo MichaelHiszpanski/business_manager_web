@@ -23,7 +23,7 @@ const ServicesSideBar: React.FC<SidebarProps> = ({ posts }) => {
   };
 
   return (
-    <aside className=" w-min  md:w-1/5 bg-transparent md:p-6 p-2 fixed left-0 top-[100px]">
+    <aside className=" w-min  md:w-1/5 bg-transparent md:p-6 p-2 fixed left-0 top-[150px] cursor-pointer z-50">
       <nav>
         <h2
           className="text-2xl md:text-3xl font-bold mb-4 text-colorFour cursor-pointer select-none"
