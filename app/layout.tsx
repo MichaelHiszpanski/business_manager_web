@@ -36,6 +36,7 @@ export default function RootLayout({
         <Footer
           isVisible={true}
           backgroudnColor="from-colorSix to-colorSeven"
+          fontColor=" text-black"
         />
         <Analytics />
       </body>
