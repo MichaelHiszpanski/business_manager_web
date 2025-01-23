@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/supabase/supabaseClient";
+import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 
 const UpdatePassword: React.FC = () => {
   const [password, setPassword] = useState("");
@@ -35,6 +36,8 @@ const UpdatePassword: React.FC = () => {
 
   const handleUpdatePassword = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateInputs()) return;
+
     const { error } = await supabase.auth.updateUser({ password });
     if (!error) {
       setMessage("Password updated successfully!");
@@ -44,22 +47,46 @@ const UpdatePassword: React.FC = () => {
     }
   };
 
+  const validateInputs = () => {
+    let isValid = true;
+    let error: string = "";
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@£$%^&*])(?=.*\d).{10,}$/;
+
+    if (password.trim() === "") {
+      error = "Password cannot be empty.";
+      isValid = false;
+    } else if (!passwordRegex.test(password)) {
+      error =
+        "Password must be at least 10 characters long, include at least one uppercase letter, one special character (!@£$%^&*), and one number.";
+      isValid = false;
+    }
+
+    setError(error);
+    return isValid;
+  };
+
   return (
     <div className="w-full flex flex-col items-center h-screen pt-[300px]">
-      <h1 className="text-2xl font-bold mb-4">Set New Password</h1>
-      {message && <p className="text-green-500">{message}</p>}
-      {error && <p className="text-red-500">{error}</p>}
+      <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
+        Set New Password
+      </h1>
+      {message && <p className="text-green-500 my-5">{message}</p>}
+
       <form
         onSubmit={handleUpdatePassword}
-        className="w-[90%] max-w-md p-4 border rounded z-50"
+        className="flex flex-col items-center md:w-[600px] w-[90%]
+        justify-center md:border border-gray-400 md:p-12 p-2 rounded-xl z-50"
       >
-        <input
+        <CustomTextInput
           type="password"
-          placeholder="New Password"
+          placeholder="Enter new password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border p-2 w-full rounded mb-4"
-          required
+          borderColor="border-colorSeven"
+          name={"password"}
+          label={"Password"}
+          error={error}
         />
         <button
           type="submit"

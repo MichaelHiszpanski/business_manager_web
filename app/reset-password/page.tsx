@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { resetPassword } from "@/supabase/supabaseAuth";
+import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 
 const ResetPassword: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -10,6 +11,7 @@ const ResetPassword: React.FC = () => {
 
   const handlePasswordReset = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateInputs()) return;
 
     const result = await resetPassword(email);
 
@@ -20,26 +22,45 @@ const ResetPassword: React.FC = () => {
     }
   };
 
+  const validateInputs = () => {
+    let isValid = true;
+    let error = "";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      error = "Please enter a valid email address.";
+      isValid = false;
+    }
+
+    if (email.trim() === "") {
+      error = "Email address cannot be empty.";
+      isValid = false;
+    }
+
+    setError(error);
+    return isValid;
+  };
+
   return (
     <div className="w-full flex flex-col items-center h-screen pt-[300px]">
-      <h1 className="text-2xl font-bold mb-4">Forgot Password</h1>
-      {message && <p className="text-green-500">{message}</p>}
-      {error && <p className="text-red-500">{error}</p>}
+      <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
+        Forgot Password
+      </h1>
+      {message && <p className="text-green-500 my-5">{message}</p>}
+
       <form
         onSubmit={handlePasswordReset}
-        className="w-full max-w-md p-4 border rounded z-50"
+        className="flex flex-col items-center md:w-[600px] w-[90%]
+        justify-center md:border border-gray-400 md:p-12 p-2 rounded-xl z-50"
       >
-        <label htmlFor="email" className="block mb-2 font-medium">
-          Email Address
-        </label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
+        <CustomTextInput
+          placeholder="Enter your mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border w-full p-2 rounded mb-4"
-          required
+          borderColor="border-colorSeven"
+          name={"email"}
+          label={"Email Address"}
+          error={error}
         />
         <button
           type="submit"
