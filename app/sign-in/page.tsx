@@ -70,7 +70,7 @@ const SignIn: NextPage = () => {
   };
 
   return (
-    <div className="w-full justify-center h-screen flex flex-col items-center">
+    <div className="w-full justify-center h-screen flex flex-col items-center bg-white">
       <div className="w-full h-full  flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
           Sign In

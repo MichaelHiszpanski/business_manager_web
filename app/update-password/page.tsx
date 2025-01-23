@@ -67,7 +67,7 @@ const UpdatePassword: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center h-screen pt-[300px]">
+    <div className="w-full flex flex-col items-center h-screen pt-[300px] bg-white">
       <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
         Set New Password
       </h1>

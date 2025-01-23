@@ -45,7 +45,7 @@ const CustomTextInput: FC<Props> = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`p-2  border   rounded w-full  ${borderColor} `}
+          className={`p-2  border text-colorOne   rounded w-full  ${borderColor} `}
           // required
         />
         {type === "password" && (
