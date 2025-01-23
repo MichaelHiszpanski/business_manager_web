@@ -109,7 +109,7 @@ const SignIn: NextPage = () => {
           </button>
         </form>
 
-        <div className="mt-4 text-xl font-jost_variabler text-colorOne">
+        <div className="mt-4 text-xl font-jost_variabler text-colorOne flex flex-col md:flex-row justify-center items-center">
           Forgot password?
           <Link
             className=" font-orbitron_variable text-colorFour ml-5"
