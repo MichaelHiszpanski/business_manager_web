@@ -106,8 +106,8 @@ export const logOut = async () => {
 };
 
 export const resetPassword = async (email: string) => {
-  const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `https://business-manager-website.vercel.app/reset-password`,
+  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: "https://business-manager-website.vercel.app/update-password",
   });
   return error ? { success: false, error } : { success: true };
 };
