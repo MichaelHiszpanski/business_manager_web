@@ -23,13 +23,13 @@ const ResetPassword: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center h-screen pt-20">
+    <div className="w-full flex flex-col items-center h-screen pt-[300px]">
       <h1 className="text-2xl font-bold mb-4">Forgot Password</h1>
       {message && <p className="text-green-500">{message}</p>}
       {error && <p className="text-red-500">{error}</p>}
       <form
         onSubmit={handlePasswordReset}
-        className="w-full max-w-md p-4 border rounded"
+        className="w-full max-w-md p-4 border rounded z-50"
       >
         <label htmlFor="email" className="block mb-2 font-medium">
           Email Address

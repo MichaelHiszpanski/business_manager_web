@@ -21,11 +21,11 @@ const UpdatePassword: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center h-screen">
+    <div className="w-full flex flex-col items-center h-screen pt-[300px]">
       <h1 className="text-2xl font-bold mb-4">Set New Password</h1>
       <form
         onSubmit={handleUpdatePassword}
-        className="w-[90%] max-w-md p-4 border rounded"
+        className="w-[90%] max-w-md p-4 border rounded z-50"
       >
         {message && <p className="text-green-500">{message}</p>}
         {error && <p className="text-red-500">{error}</p>}
