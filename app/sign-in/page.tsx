@@ -82,7 +82,7 @@ const SignIn: NextPage = () => {
            justify-center z-30 md:border border-gray-400 md:p-12 p-2 rounded-xl"
         >
           <CustomTextInput
-            placeholder="Email"
+            placeholder="Enter Email"
             value={userData.email}
             onChange={handleInputChange}
             borderColor="border-colorSeven"
@@ -93,7 +93,7 @@ const SignIn: NextPage = () => {
 
           <CustomTextInput
             type="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             value={userData.password}
             onChange={handleInputChange}
             borderColor="border-colorSeven"
@@ -108,7 +108,17 @@ const SignIn: NextPage = () => {
             Sign In
           </button>
         </form>
-        <div className="my-10 text-xl font-jost_variabler">
+
+        <div className="mt-4 text-xl font-jost_variabler">
+          Forgot password?
+          <Link
+            className=" font-orbitron_variable text-colorFour ml-5"
+            href={"/reset-password"}
+          >
+            Reset Password
+          </Link>
+        </div>
+        <div className="mt-10 text-xl font-jost_variabler">
           Don`t have an account?
           <Link
             className=" font-orbitron_variable text-colorFour ml-5"
