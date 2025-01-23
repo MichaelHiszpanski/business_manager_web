@@ -41,7 +41,7 @@ const UpdatePassword: React.FC = () => {
     const { error } = await supabase.auth.updateUser({ password });
     if (!error) {
       setMessage("Password updated successfully!");
-      setTimeout(() => router.push("/sign-in"), 3000);
+      setTimeout(() => router.push("/"), 3000);
     } else {
       setError(error.message || "An error occurred. Please try again.");
     }
@@ -71,7 +71,9 @@ const UpdatePassword: React.FC = () => {
       <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
         Set New Password
       </h1>
-      {message && <p className="text-green-500 my-5">{message}</p>}
+      {message && (
+        <p className="text-green-500 my-5 font-orbitron_variable">{message}</p>
+      )}
 
       <form
         onSubmit={handleUpdatePassword}

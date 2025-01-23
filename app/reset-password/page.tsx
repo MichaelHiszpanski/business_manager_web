@@ -46,7 +46,9 @@ const ResetPassword: React.FC = () => {
       <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
         Forgot Password
       </h1>
-      {message && <p className="text-green-500 my-5">{message}</p>}
+      {message && (
+        <p className="text-green-500 my-5 font-orbitron_variable">{message}</p>
+      )}
 
       <form
         onSubmit={handlePasswordReset}

@@ -25,14 +25,15 @@ const Footer: FC<Props> = ({
                    isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
                  }`}
     >
-      <button
-        onClick={handleContactClick}
-        className={`${fontColor} md:ml-16  select-none hover:scale-125 transition font-orbitron_variable`}
-      >
-        Contact
-      </button>
       <Link
-        className={`${fontColor} select-none font-jost_variable"`}
+        className={`${fontColor} select-none  font-orbitron_variable md:ml-10 cursor-pointer hover:scale-125 transition `}
+        href={"https://www.open.ac.uk/"}
+        target="_blank"
+      >
+        The Open University
+      </Link>
+      <Link
+        className={`${fontColor} select-none font-jost_variable cursor-pointer"`}
         href={"https://dungeon-studio.vercel.app/"}
         target="_blank"
       >
@@ -41,7 +42,7 @@ const Footer: FC<Props> = ({
       <div className=" flex justify-center md:mr-16">
         <a
           href="https://nextjs.org/"
-          className={`${fontColor} text-right  lg:text-left select-none hover:scale-125 transition  font-orbitron_variable`}
+          className={`${fontColor} text-right  lg:text-left select-none hover:scale-125 transition  font-orbitron_variable cursor-pointer`}
           target="_blank"
           rel="noopener noreferrer"
         >
