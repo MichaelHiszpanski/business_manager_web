@@ -72,7 +72,7 @@ const SignIn: NextPage = () => {
   return (
     <div className="w-full justify-center h-screen flex flex-col items-center bg-white">
       <div className="w-full h-full  flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold mb-4 font-orbitron_variable">
+        <h1 className="text-2xl font-bold mb-4 font-orbitron_variable text-colorOne">
           Sign In
         </h1>
         {apiError && <p className="text-red-500 mb-4">{apiError}</p>}
@@ -109,7 +109,7 @@ const SignIn: NextPage = () => {
           </button>
         </form>
 
-        <div className="mt-4 text-xl font-jost_variabler">
+        <div className="mt-4 text-xl font-jost_variabler text-colorOne">
           Forgot password?
           <Link
             className=" font-orbitron_variable text-colorFour ml-5"
@@ -118,7 +118,7 @@ const SignIn: NextPage = () => {
             Reset Password
           </Link>
         </div>
-        <div className="mt-10 text-xl font-jost_variabler">
+        <div className="mt-10 text-xl font-jost_variabler text-colorOne">
           Don`t have an account?
           <Link
             className=" font-orbitron_variable text-colorFour ml-5"
