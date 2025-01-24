@@ -53,19 +53,22 @@ const NavigationBar: FC = () => {
 
     return () => subscription.unsubscribe();
   }, []);
-
-  const handleLogOut = async () => {
-    try {
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
-
-      setIsAuthenticated(false);
-      router.push("/");
-    } catch (error) {
-      console.error("Error signing out:", error);
-      setError("An unexpected error occurred while signing out.");
-    }
+  const handleNavigation = (href: string) => {
+    router.push(href);
+    setIsModalOpen(false);
   };
+  // const handleLogOut = async () => {
+  //   try {
+  //     const { error } = await supabase.auth.signOut();
+  //     if (error) throw error;
+
+  //     setIsAuthenticated(false);
+  //     router.push("/");
+  //   } catch (error) {
+  //     console.error("Error signing out:", error);
+  //     setError("An unexpected error occurred while signing out.");
+  //   }
+  // };
 
   return (
     <nav className="w-full z-50 fixed top-0  h-[100px] flex flex-row justify-evenly items-center">
@@ -101,12 +104,6 @@ const NavigationBar: FC = () => {
           />
         ))}
         {isAuthenticated ? (
-          // <button
-          //   onClick={handleLogOut}
-          //   className="md:flex hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
-          // >
-          //   Log Out
-          // </button>
           <UserButton />
         ) : (
           <NavigationLinkButton
@@ -129,16 +126,12 @@ const NavigationBar: FC = () => {
                   key={element.name}
                   name={element.name}
                   hrefLink={element.hrefLink}
+                  className="text-black font-bold hover:underline mb-2"
+                  onClick={() => setIsModalOpen(false)}
                 />
               ))}
 
               {isAuthenticated ? (
-                // <button
-                //   onClick={handleLogOut}
-                //   className="flex md:hidden  rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl"
-                // >
-                //   Log Out
-                // </button>
                 <UserButton />
               ) : (
                 <NavigationLinkButton name="Sign In" hrefLink="/sign-in" />

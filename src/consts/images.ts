@@ -5,6 +5,7 @@ export const wave_down_three = require("/assets/svg/wave_down_three.svg");
 
 // Icons
 export const logo = require("/assets/icons/logo.svg");
+export const userLogo = require("/assets/icons/userLogo.png");
 
 // Images
 export const flutterLogoOne = require("assets/images/flutter1.jpeg");

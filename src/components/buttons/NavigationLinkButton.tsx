@@ -4,12 +4,19 @@ interface Props {
   name: string;
   hrefLink: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const NavigationLinkButton: FC<Props> = ({ name, hrefLink, className }) => {
+const NavigationLinkButton: FC<Props> = ({
+  name,
+  hrefLink,
+  className,
+  onClick,
+}) => {
   return (
     <div
       className={` ${className} rounded-xl font-bold hover:scale-110 select-none font-orbitron_variable text-xl`}
+      onClick={onClick}
     >
       <Link href={hrefLink}>{name}</Link>
     </div>
