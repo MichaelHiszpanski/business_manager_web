@@ -31,7 +31,7 @@ const CustomTextInput: FC<Props> = ({
     );
   };
   return (
-    <div className="w-full mb-2">
+    <div className="w-full  h-[90px]">
       {isLabel && (
         <label className="block text-sm font-medium text-colorOne bg-white  mb-1">
           {label}

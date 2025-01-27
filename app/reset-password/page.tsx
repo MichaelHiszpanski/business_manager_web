@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { resetPassword } from "@/supabase/supabaseAuth";
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
+import Link from "next/link";
 
 const ResetPassword: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -66,11 +67,20 @@ const ResetPassword: React.FC = () => {
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white w-full py-2 rounded"
+          className="bg-blue-500 mt-5 text-white w-full py-2  rounded"
         >
           Send Reset Email
         </button>
       </form>
+      <div className="my-10 text-xl font-jost_variabler text-colorOne">
+        Already have an account?
+        <Link
+          className=" font-orbitron_variable text-colorFour ml-5"
+          href={"/sign-in"}
+        >
+          Sign-in
+        </Link>
+      </div>
     </div>
   );
 };

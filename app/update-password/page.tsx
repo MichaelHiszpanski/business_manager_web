@@ -92,7 +92,7 @@ const UpdatePassword: React.FC = () => {
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white w-full py-2 rounded"
+          className="bg-blue-500 text-white w-full py-2 mt-2 rounded"
         >
           Update Password
         </button>
