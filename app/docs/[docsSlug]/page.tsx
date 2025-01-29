@@ -57,9 +57,9 @@ export default async function VisaPage({
   const contentHtml = processedContent.toString();
 
   return (
-    <div className=" w-full items-center bg-gradient-to-r from-gray-400 to-slate-200 justify-center pb-24 pt-[100px]">
+    <div className=" w-full items-center bg-gradient-to-r from-colorSix to-colorSeven justify-center pb-24 pt-[100px] flex flex-col  ">
       <ServicesSideBar posts={posts} />
-      <div className="w-full flex flex-col md:px-80 px-4">
+      <div className="  max-w-[1000px] flex flex-col items-center justify-center px-4">
         <div className="prose w-full md:max-w-none bg-white p-5 z-30 mt-[100px]  rounded-xl shadow-xl">
           <h1 className="font-semibold text-2xl py-5 select-none">
             {frontmatter.title}

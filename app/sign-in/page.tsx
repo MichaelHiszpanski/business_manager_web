@@ -124,7 +124,7 @@ const SignIn: NextPage = () => {
             className=" font-orbitron_variable text-colorFour ml-5"
             href={"/sign-up"}
           >
-            Sign-up
+            Sign-Up
           </Link>
         </div>
       </div>

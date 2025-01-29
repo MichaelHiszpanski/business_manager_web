@@ -40,7 +40,7 @@ const NavigationBar: FC = () => {
       <Image
         src={wave_one}
         alt="bg"
-        className=" w-full absolute top-0 md:top-[-60px]  select-none overflow-hidden "
+        className=" w-full absolute top-0 md:top-[-60px]   select-none overflow-hidden "
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

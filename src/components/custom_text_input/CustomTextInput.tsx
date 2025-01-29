@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 interface Props {
@@ -30,6 +30,20 @@ const CustomTextInput: FC<Props> = ({
       prevType === "password" ? "text" : "password"
     );
   };
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.removeAttribute("readonly"); // Remove readonly to prevent autofill issues
+    }
+  }, []);
+
+  const handleFocus = () => {
+    if (inputRef.current) {
+      inputRef.current.focus(); // Focus on input
+      inputRef.current.select(); // Select all text
+    }
+  };
   return (
     <div className="w-full  h-[90px]">
       {isLabel && (
@@ -39,6 +53,7 @@ const CustomTextInput: FC<Props> = ({
       )}
       <div className="relative">
         <input
+          ref={inputRef}
           type={currentKeyboardType}
           name={name}
           id={name}
@@ -46,7 +61,7 @@ const CustomTextInput: FC<Props> = ({
           value={value}
           onChange={onChange}
           className={`p-2  border text-colorOne   rounded w-full  ${borderColor} `}
-          // required
+          autoComplete="off"
         />
         {type === "password" && (
           <button

@@ -78,7 +78,7 @@ const ResetPassword: React.FC = () => {
           className=" font-orbitron_variable text-colorFour ml-5"
           href={"/sign-in"}
         >
-          Sign-in
+          Sign-In
         </Link>
       </div>
     </div>
