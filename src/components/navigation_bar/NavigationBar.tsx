@@ -5,44 +5,24 @@ import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
 import useOutsideClick from "../../utils/tools/useOutsideClick";
-import { signOut, getAuth } from "firebase/auth";
-// import app from "@/firebase/firebase";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { supabase } from "@/supabase/supabaseClient";
 import UserButton from "@/supabase/UserButton";
+
 const NavigationBar: FC = () => {
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
   const [error, setError] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
 
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // const auth = getAuth(app);
-
-  // const isMobileSize = useMediaQuery({ maxWidth: 767 });
-
-  // useEffect(() => {
-  //   const unsubscribe = auth.onAuthStateChanged((user) => {
-  //     setIsAuthenticated(!!user);
-  //   });
-  //   return unsubscribe;
-  // }, [auth]);
-
-  // const handleLogOut = async () => {
-  //   try {
-  //     await signOut(auth);
-  //     setIsAuthenticated(false);
-  //     router.push("/");
-  //   } catch (error) {
-  //     console.error("Error signing out:", error);
-  //     setError("An unexpected error occurred while signing out.");
-  //   }
-  // };
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const isMobileSize = useMediaQuery({ maxWidth: 767 });
+
+  const isDocsPage = pathname.startsWith("/docs");
 
   useEffect(() => {
     const {
@@ -53,23 +33,8 @@ const NavigationBar: FC = () => {
 
     return () => subscription.unsubscribe();
   }, []);
-  const handleNavigation = (href: string) => {
-    router.push(href);
-    setIsModalOpen(false);
-  };
-  // const handleLogOut = async () => {
-  //   try {
-  //     const { error } = await supabase.auth.signOut();
-  //     if (error) throw error;
-
-  //     setIsAuthenticated(false);
-  //     router.push("/");
-  //   } catch (error) {
-  //     console.error("Error signing out:", error);
-  //     setError("An unexpected error occurred while signing out.");
-  //   }
-  // };
-
+  const styleButtonsLinks =
+    "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-lg overflow-hidden bg-opacity-75";
   return (
     <nav className="w-full z-50 fixed top-0  h-[100px] flex flex-row justify-evenly items-center">
       <Image
@@ -100,7 +65,9 @@ const NavigationBar: FC = () => {
             key={element.name}
             name={element.name}
             hrefLink={element.hrefLink}
-            className=" hidden md:flex"
+            className={`hidden md:flex ${
+              isDocsPage ? styleButtonsLinks : "text-black"
+            }`}
           />
         ))}
         {isAuthenticated ? (
@@ -109,7 +76,9 @@ const NavigationBar: FC = () => {
           <NavigationLinkButton
             name="Sign In"
             hrefLink="/sign-in"
-            className="md:flex hidden"
+            className={`hidden md:flex ${
+              isDocsPage ? styleButtonsLinks : "text-black"
+            }`}
           />
         )}
       </div>
@@ -120,13 +89,14 @@ const NavigationBar: FC = () => {
             ref={navRef}
           >
             <div className="flex flex-col justify-center items-center text-black ">
-              {/* <h2 className="text-lg font-bold mb-2 text-black">Navigation</h2> */}
               {navigationItems.map((element) => (
                 <NavigationLinkButton
                   key={element.name}
                   name={element.name}
                   hrefLink={element.hrefLink}
-                  className="text-black font-bold hover:underline mb-2"
+                  className={` ${
+                    isDocsPage ? "text-white" : "text-black"
+                  } font-bold hover:underline mb-2"`}
                   onClick={() => setIsModalOpen(false)}
                 />
               ))}
@@ -134,7 +104,11 @@ const NavigationBar: FC = () => {
               {isAuthenticated ? (
                 <UserButton />
               ) : (
-                <NavigationLinkButton name="Sign In" hrefLink="/sign-in" />
+                <NavigationLinkButton
+                  name="Sign In"
+                  hrefLink="/sign-in"
+                  className={` ${isDocsPage ? "text-white" : "text-black"}`}
+                />
               )}
             </div>
           </div>
