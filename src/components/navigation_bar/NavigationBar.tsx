@@ -5,16 +5,15 @@ import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
 import useOutsideClick from "../../utils/tools/useOutsideClick";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { supabase } from "@/supabase/supabaseClient";
 import UserButton from "@/supabase/UserButton";
 
 const NavigationBar: FC = () => {
-  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
-  const [error, setError] = useState<string | null>(null);
+
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
 
@@ -34,7 +33,7 @@ const NavigationBar: FC = () => {
     return () => subscription.unsubscribe();
   }, []);
   const styleButtonsLinks =
-    "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-lg overflow-hidden bg-opacity-75";
+    "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-xl overflow-hidden bg-opacity-75 border border-colorSix";
   return (
     <nav className="w-full z-50 fixed top-0  h-[100px] flex flex-row justify-evenly items-center">
       <Image

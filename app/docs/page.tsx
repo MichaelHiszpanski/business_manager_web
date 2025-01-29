@@ -49,7 +49,6 @@ const Docs: NextPage = ({}) => {
           ))}
         </div>
       </div>
-      {/* <Footer isVisible={false} /> */}
     </section>
   );
 };

@@ -15,7 +15,8 @@ const NavigationLinkButton: FC<Props> = ({
 }) => {
   return (
     <div
-      className={` ${className} rounded-xl font-bold hover:scale-125 select-none font-orbitron_variable text-xl`}
+      className={` ${className} rounded-xl font-bold hover:scale-125 
+      transition-transform duration-300 ease-in-out select-none font-orbitron_variable text-xl`}
       onClick={onClick}
     >
       <Link href={hrefLink}>{name}</Link>
