@@ -33,7 +33,8 @@ const Docs: NextPage = ({}) => {
             <Link
               href={`docs/${post.slug}`}
               key={post?.title}
-              className=" p-8 rounded-xl shadow-lg shadow-white bg-colorFive relative border border-colorSix "
+              className=" p-8 rounded-xl  hover:scale-105 transition-transform duration-150 ease-in-out
+               shadow-lg shadow-white bg-colorFive relative border border-colorSix "
             >
               <h3 className=" text-xl font-semibold text-colorSix font-orbitron_variable">
                 {post.title}
