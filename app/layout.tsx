@@ -29,11 +29,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="color-scheme" content="light only" />
-      </Head>
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body
-        className={`${geistSans.variable}  ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable}  ${geistMono.variable} antialiased bg-white`}
+        style={{
+          backgroundColor: "#ffffff",
+          color: "#000000",
+          WebkitFilter: "invert(0) !important",
+          filter: "invert(0) !important",
+        }}
       >
         <NavigationBar />
         {children}
