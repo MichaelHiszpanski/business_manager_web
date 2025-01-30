@@ -56,7 +56,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="hidden md:block">
+      <section className=":block">
         <div className="marquee-wrapper mt-28">
           <p className="marquee-text text-colorOne select-none">
             Please note that this website is currently under construction. I
