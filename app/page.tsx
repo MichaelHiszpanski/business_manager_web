@@ -59,9 +59,9 @@ export default function Home() {
       <section className=":block">
         <div className="marquee-wrapper mt-28">
           <p className="marquee-text text-colorOne select-none">
-            Please note that this website is currently under construction. I
-            appreciate your patience and understanding as I work to bring you a
-            complete and improved experience.
+            Please note that this website and mobile application is currently
+            under construction. I appreciate your patience and understanding as
+            I work to bring you a complete and improved experience.
           </p>
         </div>
       </section>
