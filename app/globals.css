@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.marquee-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  z-index: 10;
+}
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    animation-duration: 15s;
+  }
+}

@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <main
       className="flex pt-navPadding flex-col w-full  h-full items-center sm:items-start
-     "
-      style={{
-        backgroundColor: "#ffffff",
-        color: "#000000",
-      }}
+     bg-white dark:bg-white "
+      //  style={{
+      //   backgroundColor: "#ffffff",
+      //   color: "#000000",
+      // }}
     >
       <section
         className=" absolute top-80 flex-col  md:hidden
@@ -54,6 +54,15 @@ export default function Home() {
               // transform: "rotate(45deg) scale(1.5)",
             }}
           />
+        </div>
+      </section>
+      <section className="hidden md:block">
+        <div className="marquee-wrapper mt-28">
+          <p className="marquee-text text-colorOne select-none">
+            Please note that this website is currently under construction. I
+            appreciate your patience and understanding as I work to bring you a
+            complete and improved experience.
+          </p>
         </div>
       </section>
       <section
