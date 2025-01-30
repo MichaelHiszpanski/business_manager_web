@@ -48,16 +48,18 @@ const NavigationBar: FC = () => {
         onClick={(e) => e.preventDefault()}
       />
       <div className="flex flex-row md:justify-evenly items-center w-full h-full z-50">
-        <Image
-          src={logo}
-          alt="logo"
-          className="w-24 h-24 cursor-pointer select-none"
-          onClick={() => {
-            if (isMobileSize) {
-              setIsModalOpen(!isModalOpen);
-            }
-          }}
-        />
+        <div className="p-5 rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
+          <Image
+            src={logo}
+            alt="logo"
+            className="w-24 h-24 cursor-pointer select-none"
+            onClick={() => {
+              if (isMobileSize) {
+                setIsModalOpen(!isModalOpen);
+              }
+            }}
+          />
+        </div>
 
         {navigationItems.map((element) => (
           <NavigationLinkButton
