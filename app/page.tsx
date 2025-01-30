@@ -56,8 +56,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className=":block">
-        <div className="marquee-wrapper mt-28">
+      <section className="md:block  hidden">
+        <div className="marquee-wrapper mx-auto mt-28 overflow-hidden max-w-full">
           <p className="marquee-text text-colorOne select-none">
             Please note that this website and mobile application is currently
             under construction. I appreciate your patience and understanding as
@@ -65,6 +65,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+
       <section
         className=" absolute top-80 flex-col my-[300px]
         md:rotate-0 w-full md:w-full overflow-hidden  left-1/2 -translate-x-1/2"
