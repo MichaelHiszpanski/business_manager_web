@@ -47,14 +47,14 @@ const About: NextPage = () => {
   }
 
   return (
-    <div className="relative w-full flex flex-col items-center bg-gradient-to-tl from-colorOne via-colorFive to-colorGreen px-6 py-10 md:pt-[150px]">
+    <div className="relative w-full flex flex-col items-center bg-gradient-to-tl from-colorSeven via-colorSix to-colorGreen px-6 py-10 md:pt-[150px]">
       <div className="flex flex-col items-center text-center">
         <Image
           src={ja}
           alt="Profile Image"
           className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover shadow-lg"
         />
-        <h1 className="text-4xl font-bold mt-6 text-colorTwo font-permanentMarker">
+        <h1 className="text-4xl font-bold mt-6 text-colorOne font-orbitron_variable">
           Michael Hiszpanski
         </h1>
         <p className="text-lg mt-2 text-white font-jost_italic">
@@ -67,10 +67,10 @@ const About: NextPage = () => {
         data-aos="fade-up"
         className="mt-10 bg-colorFive p-6 rounded-lg shadow-lg text-white md:w-2/3 text-center"
       >
-        <h2 className="text-2xl font-bold mb-4 font-permanentMarker text-colorTwo">
+        <h2 className="text-2xl font-bold mb-4 font-orbitron_variable text-colorTwo">
           About Me
         </h2>
-        <p className="text-lg font-orbitron_variable">
+        <p className="text-lg font-mono text-white">
           Hello! I’m Michael, a passionate software developer pursuing my BSc in
           Computing. I have a strong foundation in software development,
           specializing in React, Next.js, and Flutter.
@@ -79,12 +79,12 @@ const About: NextPage = () => {
 
       <div
         data-aos="fade-up"
-        className="mt-10 bg-colorThree p-6 rounded-lg shadow-lg text-white md:w-2/3 text-center"
+        className="mt-10 bg-colorFour p-6 rounded-lg shadow-lg text-white md:w-2/3 text-center"
       >
-        <h2 className="text-2xl font-bold mb-4 font-permanentMarker text-colorTwo">
+        <h2 className="text-2xl font-bold mb-4 font-orbitron_variable text-colorTwo">
           Skills & Interests
         </h2>
-        <ul className="list-disc list-inside text-lg space-y-2">
+        <ul className="list-disc list-inside text-lg space-y-2 text-colorOne">
           <li>Cloud Technologies: Azure, AWS</li>
           <li>Web Development: React JS, Next.js</li>
           <li>Mobile App Development: Flutter</li>
