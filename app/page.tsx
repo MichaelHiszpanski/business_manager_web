@@ -1,25 +1,16 @@
 "use client";
 import React, { useEffect } from "react";
-import NavigationBar from "../src/components/navigation_bar/NavigationBar";
 import Image from "next/image";
-import Footer from "@/components/footer/Footer";
 import {
   wave_down_three,
   wave_up_two,
   flutterLogoOne,
-  flutterLogoTwo,
   googlePlayLogo2,
 } from "@/consts/images";
-import GridWrapper from "@/utils/wrappers/grid_wrapper";
-import ServiceCard from "@/components/cards/ServiceCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 export default function Home() {
-  const serviceCardSettings = {
-    width: "w-[300px]",
-    height: "h-[400px]",
-  };
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -27,7 +18,11 @@ export default function Home() {
   return (
     <main
       className="flex pt-navPadding flex-col w-full  h-full items-center sm:items-start
-     bg-white "
+     "
+      style={{
+        backgroundColor: "#ffffff",
+        color: "#000000",
+      }}
     >
       <section
         className=" absolute top-80 flex-col  md:hidden
@@ -207,51 +202,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      {/* <section className="w-full mt-[100px] md:mt-[300px] z-10 px-5 md:px-[100px] ">
-        <div className="w-full flex flec-col justify-center">
-          <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold my-12">
-            Services
-          </h2>
-        </div>
-        <GridWrapper columnGap="4">
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 1"
-            content="Content 1"
-          />
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 2"
-            content="Content 2"
-          />
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 3"
-            content="Content 3"
-          />
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 1"
-            content="Content 1"
-          />
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 2"
-            content="Content 2"
-          />
-          <ServiceCard
-            width={serviceCardSettings.width}
-            height={serviceCardSettings.height}
-            title="Service 3"
-            content="Content 3"
-          />
-        </GridWrapper>
-      </section> */}
     </main>
   );
 }
