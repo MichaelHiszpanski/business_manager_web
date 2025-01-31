@@ -4,11 +4,11 @@ import { logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
-import useOutsideClick from "../../utils/tools/useOutsideClick";
 import { usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { supabase } from "@/supabase/supabaseClient";
 import UserButton from "@/supabase/UserButton";
+import useOutsideClick from "@/utils/helpers/useOutsideClick";
 
 const NavigationBar: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

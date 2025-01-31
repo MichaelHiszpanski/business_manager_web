@@ -26,7 +26,7 @@ export default function Home() {
     >
       <section
         className=" absolute top-80 flex-col  md:hidden
-        md:rotate-0 w-full md:w-full overflow-hidden  left-1/2 -translate-x-1/2"
+        md:rotate-0 w-full md:w-full overflow-hidden  2"
       >
         <div className="relative w-full flex  h-full">
           <Image
@@ -56,9 +56,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="md:block  hidden">
-        <div className="marquee-wrapper mx-auto mt-28 overflow-hidden max-w-full">
-          <p className="marquee-text text-colorOne select-none">
+      <section className="w-full overflow-hidden">
+        <div className="marquee-wrapper mx-auto mt-10 max-w-full py-4 md:py-6">
+          <p className="marquee-text text-colorOne select-none text-sm md:text-base leading-normal md:leading-relaxed">
             Please note that this website and mobile application is currently
             under construction. I appreciate your patience and understanding as
             I work to bring you a complete and improved experience.
@@ -68,7 +68,7 @@ export default function Home() {
 
       <section
         className=" absolute top-80 flex-col my-[300px]
-        md:rotate-0 w-full md:w-full overflow-hidden  left-1/2 -translate-x-1/2"
+        md:rotate-0 w-full md:w-full overflow-hidden  "
       >
         <div className="relative w-full flex  h-full">
           <Image
