@@ -1,14 +1,11 @@
 ---
 title: To Do List
-meta: Discover how the To-Do List feature in the Business Manager app streamlines task management, boosts productivity, and keeps you organized.
+meta: Discover how the To-Do List feature in the Business Manager app streamlines task management, boosts productivity, and keeps you organized!
 slug: to_do_list
 ---
 
 ## To-Do List: Your Productivity Partner in Business Management
 
-<img width="402" alt="Image" src= />
-
-<img width="414" alt="Image" src= />
 <p class="responsive-container">
  <img alt="Image" src="https://github.com/user-attachments/assets/a84bd317-a906-40e9-a590-a39ef91fdac8" width="200" height="400"/>
  <span class="responsive-text">
