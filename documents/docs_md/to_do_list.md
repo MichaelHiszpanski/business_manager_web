@@ -13,6 +13,12 @@ slug: to_do_list
   </span>
 </p>
 
+## Benefits of Using the To-Do List
+
+- **Enhanced Productivity**: By having all tasks in a centralized, easily accessible list, you’ll save time, improve focus, and increase productivity.
+- **Improved Time Management**: The To-Do List allows you to view and adjust priorities easily, ensuring that high-priority tasks are completed on time.
+- **Reduced Overwhelm**: Break larger projects into manageable tasks, helping you feel less overwhelmed and more in control of your workload.
+
 ## Key Features of the To-Do List
 
 <p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
@@ -26,17 +32,8 @@ slug: to_do_list
   </span>
 </p>
 
-## Benefits of Using the To-Do List
-
-- **Enhanced Productivity**: By having all tasks in a centralized, easily accessible list, you’ll save time, improve focus, and increase productivity.
-- **Improved Time Management**: The To-Do List allows you to view and adjust priorities easily, ensuring that high-priority tasks are completed on time.
-- **Reduced Overwhelm**: Break larger projects into manageable tasks, helping you feel less overwhelmed and more in control of your workload.
-
 ## Getting Started with the To-Do List
 
 1. **Create a Task**: Tap the “Add Task” button to enter task details, including title, description, due date, and priority level.
 2. **Manage and Organize**: Sort tasks by priority or due date to organize your day effectively.
 3. **Complete and Archive**: Mark tasks as complete to keep your list clutter-free, and archive them for future reference.
-4. **Set Reminders**: Enable notifications for important tasks to stay on top of deadlines and commitments.
-
-> **Tip:** Regularly review your task list to adjust priorities and keep your goals aligned with your daily schedule.

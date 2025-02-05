@@ -6,9 +6,18 @@ slug: employee_management
 
 ## Employee Management in Business Manager App
 
-The **Employee Management** feature in the Business Manager app is designed to help businesses efficiently manage their workforce and tasks. This intuitive system enables you to add employees, assign tasks, and monitor task progress with ease.
+<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+ <img alt="Image" src="https://github.com/user-attachments/assets/dd7c897c-bb10-44d6-859f-9d6d59913467"  width="200" height="400"/>
+  <span style="display: flex; flex-direction: column; max-width: 400px;">
+<strong>The Employee Management</strong>feature in the Business Manager app is designed to help businesses efficiently manage their workforce and tasks. This intuitive system enables you to add employees, assign tasks, and monitor task progress with ease.
+  </span>
+</p>
 
-### Key Features
+### Benefits
+
+- **Simplified Workflow** – Easily assign and track tasks.
+- **Boosted Productivity** – Keep employees aligned with goals.
+- **Smart Decisions** – Use data insights for better management.
 
 1. **Add Employees**
 
@@ -17,33 +26,33 @@ The **Employee Management** feature in the Business Manager app is designed to h
 
 2. **Task Assignment**
 
-   - Assign tasks to specific employees, ensuring clear delegation of responsibilities.
-   - Specify task details such as deadlines and priorities to keep everyone on track.
+<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+ <img alt="Image" src="https://github.com/user-attachments/assets/be5a4b38-ac6a-49be-b28c-29be78987c5f"  width="200" height="400"/>
+   <span style="display: flex; flex-direction: column; max-width: 400px;">
+ <strong> Assign tasks to specific employees</strong> ensuring clear delegation of responsibilities.
+Specify task details such as deadlines and priorities to keep everyone on track.
+     </span>
+</p>
 
 3. **Track Task Progress**
 
-   - Mark tasks as done or not done in real time, offering transparency and accountability.
-   - View each employee's task completion rate for better performance analysis.
+<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+ <img alt="Image" src="https://github.com/user-attachments/assets/876a794b-20f1-4580-b8c3-4546d4290554"  width="200" height="400"/>
+   <span style="display: flex; flex-direction: column; max-width: 400px;">
+ <strong>Mark tasks as done or not done in real times</strong>offering transparency and accountability.
+View each employee's task completion rate for better performance analysis.
+     </span>
+</p>
 
 4. **Visual Progress Tracking**
    - Use interactive graphs to visualize employee performance and task progress.
    - Gain actionable insights to optimize productivity and identify bottlenecks.
 
-### Benefits
+### Key Features
 
-- **Streamlined Workflow**: Simplify task delegation and monitoring with a user-friendly interface.
-- **Enhanced Productivity**: Ensure employees are aligned with organizational goals by keeping track of task statuses.
-- **Data-Driven Decisions**: Leverage graphical insights to make informed decisions for team management.
+- **Add Employees** – Quickly add and manage employee details.
+- **Task Assignment** – Assign tasks with deadlines and priorities.
+- **Track Progress** – Monitor task completion in real-time.
+- **Visual Insights** – Use graphs to analyze performance.
 
-### Why Choose Employee Management in Business Manager App?
-
-This feature not only centralizes employee and task management but also enhances team collaboration. Whether you're running a small business or managing a larger team, the Employee Management module provides the tools you need to stay organized and efficient.
-
-Start using the Employee Management feature today and take control of your workforce with confidence.
-
-1. **Create a New Invoice**: Start by entering client details, services provided, and rates for a quick and accurate invoice.
-2. **Customize the Template**: Add your logo and adjust colors to ensure the invoice aligns with your brand.
-3. **Save and Generate PDF**: Generate the invoice as a PDF, ready to be sent to clients instantly.
-4. **Track Payment Status**: Mark invoices as paid or unpaid, and get reminders for upcoming or overdue payments.
-
-> **Tip:** Regularly update client and service information to streamline the invoicing process and maintain accuracy.
+More features are coming in future updates to enhance efficiency and management! 🚀
