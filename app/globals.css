@@ -39,11 +39,6 @@ body {
     transform: translateX(-100%);
   }
 }
-@media (max-width: 768px) {
-  .marquee-wrapper {
-    animation-duration: 15s;
-  }
-}
 
 /* For Markdown files */
 
@@ -57,11 +52,21 @@ body {
 }
 
 .responsive-text {
-  max-width: 600px;
+  width: 50%;
+  text-align: start;
 }
 
 @media (max-width: 768px) {
   .responsive-container {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    animation-duration: 15s;
+  }
+  .responsive-text {
+    text-align: center;
   }
 }

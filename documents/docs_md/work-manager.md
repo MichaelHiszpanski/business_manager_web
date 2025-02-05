@@ -21,9 +21,9 @@ slug: work-manager
 - **Task and Job Categorization**: Organize tasks by categories or labels, making it easy to prioritize and track progress.
 
 <p class="responsive-container">
-    <img alt="Image" src="https://github.com/user-attachments/assets/4a436c53-8a19-4a8b-ad56-d938ef35bd96"   width="200" height="400"/>
-    <img alt="Image" src="https://github.com/user-attachments/assets/21df19be-93ae-410c-b3b1-3ab0a9d44114"  width="200" height="400"/>
-    <img alt="Image" src="https://github.com/user-attachments/assets/8cfca5b8-05a4-4f59-aa5d-8db6f597492b"  width="200" height="400"/>
+    <img alt="Image" src="https://github.com/user-attachments/assets/4a436c53-8a19-4a8b-ad56-d938ef35bd96"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+    <img alt="Image" src="https://github.com/user-attachments/assets/21df19be-93ae-410c-b3b1-3ab0a9d44114"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+    <img alt="Image" src="https://github.com/user-attachments/assets/8cfca5b8-05a4-4f59-aa5d-8db6f597492b"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
    <span class="responsive-text">
 </p>
  <strong>Add New Event or Set a Range:</strong>Create new events by selecting specific dates and times, setting a date range, and   choosing a color for the current event.
@@ -37,16 +37,16 @@ slug: work-manager
 4. **Review Progress**: Check off completed tasks and monitor progress to stay on track with your goals.
 
 <p class="responsive-container">
-    <img alt="Image" src="https://github.com/user-attachments/assets/43f7c410-fd07-4ed2-9c39-7788f383833f"   width="200" height="400"/>
-    <img alt="Image" src="https://github.com/user-attachments/assets/e7103efe-6484-47a5-84d9-7f5e37dd708c"  width="200" height="400"/>
-    <img alt="Image" src="https://github.com/user-attachments/assets/edcfe75e-f28b-4829-8a10-e47ad61b17bf"  width="200" height="400"/>
+    <img alt="Image" src="https://github.com/user-attachments/assets/43f7c410-fd07-4ed2-9c39-7788f383833f"   class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+    <img alt="Image" src="https://github.com/user-attachments/assets/e7103efe-6484-47a5-84d9-7f5e37dd708c"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+    <img alt="Image" src="https://github.com/user-attachments/assets/edcfe75e-f28b-4829-8a10-e47ad61b17bf"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
    <span class="responsive-text">
 </p>
  <strong>Display Different Calendar Views:</strong> View your schedule by day, week, or month, display in schedule list format, and track your time and actions properly.
      </span>
 
 <p class="responsive-container">
- <img alt="Image" src="https://github.com/user-attachments/assets/741e4f2e-c3cc-4897-86c8-fc797f92157f"   width="200" height="400"/>
+ <img alt="Image" src="https://github.com/user-attachments/assets/741e4f2e-c3cc-4897-86c8-fc797f92157f"   class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
    <span class="responsive-text">
  <strong> Review Task Details and Delete Tasks:</strong> Easily view task details in a modal window and delete tasks by selecting them.
      </span>
