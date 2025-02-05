@@ -1,6 +1,6 @@
 "use client";
 import React, { FC, useState, useRef, useEffect } from "react";
-import { logo, wave_one } from "@/consts/images";
+import { earth3, logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
 import NavigationLinkButton from "../buttons/NavigationLinkButton";
@@ -50,9 +50,10 @@ const NavigationBar: FC = () => {
       <div className="flex flex-row md:justify-evenly items-center w-full h-full z-50">
         <div className="p-5 rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
           <Image
-            src={logo}
+            src={earth3}
             alt="logo"
             className="w-24 h-24 cursor-pointer select-none"
+            onDragStart={(e) => e.preventDefault()}
             onClick={() => {
               if (isMobileSize) {
                 setIsModalOpen(!isModalOpen);

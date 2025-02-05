@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     config.experiments = {
       ...config.experiments,
       asyncWebAssembly: true,
+      // pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
     };
 
     config.module.rules.push({

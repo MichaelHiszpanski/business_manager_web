@@ -4,16 +4,27 @@ meta: Discover how the To-Do List feature in the Business Manager app streamline
 slug: to_do_list
 ---
 
-# To-Do List: Your Productivity Partner in Business Management
+## To-Do List: Your Productivity Partner in Business Management
 
-The To-Do List feature in the Business Manager app is designed to help business owners and professionals stay organized and manage their tasks efficiently. With a focus on simplicity and usability, the To-Do List helps you prioritize and keep track of daily tasks, deadlines, and important projects—all in one place.
+<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+ <img alt="Image" src="https://github.com/user-attachments/assets/d017d347-8216-46b0-a3be-b4b7e33b8b5c"  width="200" height="400"/>
+  <span style="display: flex; flex-direction: column; max-width: 400px;">
+<strong>The To-Do List</strong>feature in the Business Manager app is designed to help business owners and professionals stay organized and manage their tasks efficiently. With a focus on simplicity and usability, the To-Do List helps you prioritize and keep track of daily tasks, deadlines, and important projects—all in one place.
+  </span>
+</p>
 
 ## Key Features of the To-Do List
 
-- **Task Prioritization**: Organize tasks by priority levels to focus on what matters most. Categorize tasks based on urgency or importance to streamline your workflow.
-- **Due Dates & Reminders**: Set deadlines and receive reminders to ensure nothing slips through the cracks, helping you stay ahead in managing responsibilities.
-- **Seamless Integration**: Link tasks to other app services, such as Contacts and Calendar, to get a complete view of your schedule and key responsibilities.
-- **Quick Add**: Add tasks quickly on the go to capture ideas or commitments instantly.
+<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  
+  <img alt="Image" src="https://github.com/user-attachments/assets/0f0c6843-7480-4fcc-8337-7946996edcd9" width="200" height="400"/>
+  
+  <span style="display: flex; flex-direction: column; max-width: 400px;">
+    <strong>Task Prioritization:</strong> Organize tasks by priority levels to focus on what matters most. Categorize tasks based on urgency or importance to streamline your workflow. <br><br>
+    <strong>Due Dates & Reminders:</strong> Set deadlines and receive reminders to ensure nothing slips through the cracks, helping you stay ahead in managing responsibilities.<br><br> 
+    <strong>Quick Add:</strong> Add tasks quickly on the go to capture ideas or commitments instantly.
+  </span>
+</p>
 
 ## Benefits of Using the To-Do List
 

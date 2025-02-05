@@ -6,6 +6,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import NavigationBar from "@/components/navigation_bar/NavigationBar";
 import ServicesSideBar from "@/components/service-side-bar/ServiceSideBar";
+import remarkStringify from "remark-stringify";
 interface Frontmatter {
   title: string;
   meta: string;
@@ -29,7 +30,7 @@ function getAllPosts() {
   });
 }
 
-export default async function VisaPage({
+export default async function DocsPage({
   params,
 }: {
   params: Promise<{ docsSlug: string }>;
@@ -53,7 +54,11 @@ export default async function VisaPage({
   const { data, content } = matter(fileContent);
   const frontmatter = data as Frontmatter;
 
-  const processedContent = await remark().use(html).process(content);
+  // const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark()
+    .use(html, { sanitize: false })
+    .process(content);
+
   const contentHtml = processedContent.toString();
 
   return (
@@ -61,7 +66,7 @@ export default async function VisaPage({
       <ServicesSideBar posts={posts} />
       <div className="  max-w-[1000px] flex flex-col items-center justify-center px-4">
         <div className="prose w-full md:max-w-none bg-white p-5 z-30 mt-[100px]  rounded-xl shadow-xl">
-          <h1 className="font-semibold text-2xl py-5 select-none">
+          <h1 className="font-semibold text-3xl py-5 select-none text-colorFive">
             {frontmatter.title}
           </h1>
           <div

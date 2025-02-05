@@ -13,3 +13,4 @@ export const flutterLogoTwo = require("assets/images/flutter2.png");
 export const googlePlayLogo = require("assets/images/gplayone.png");
 export const googlePlayLogo2 = require("assets/images/play2.png");
 export const ja = require("assets/images/ja.jpeg");
+export const earth3 = require("assets/images/earth3.png");
