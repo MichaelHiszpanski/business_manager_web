@@ -6,9 +6,9 @@ slug: employee_management
 
 ## Employee Management in Business Manager App
 
-<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+<p class="responsive-container">
  <img alt="Image" src="https://github.com/user-attachments/assets/dd7c897c-bb10-44d6-859f-9d6d59913467"  width="200" height="400"/>
-  <span style="display: flex; flex-direction: column; max-width: 400px;">
+ <span class="responsive-text">
 <strong>The Employee Management</strong>feature in the Business Manager app is designed to help businesses efficiently manage their workforce and tasks. This intuitive system enables you to add employees, assign tasks, and monitor task progress with ease.
   </span>
 </p>
@@ -26,9 +26,9 @@ slug: employee_management
 
 2. **Task Assignment**
 
-<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+<p class="responsive-container">
  <img alt="Image" src="https://github.com/user-attachments/assets/be5a4b38-ac6a-49be-b28c-29be78987c5f"  width="200" height="400"/>
-   <span style="display: flex; flex-direction: column; max-width: 400px;">
+   <span class="responsive-text">
  <strong> Assign tasks to specific employees</strong> ensuring clear delegation of responsibilities.
 Specify task details such as deadlines and priorities to keep everyone on track.
      </span>
@@ -36,9 +36,9 @@ Specify task details such as deadlines and priorities to keep everyone on track.
 
 3. **Track Task Progress**
 
-<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+<p class="responsive-container">
  <img alt="Image" src="https://github.com/user-attachments/assets/876a794b-20f1-4580-b8c3-4546d4290554"  width="200" height="400"/>
-   <span style="display: flex; flex-direction: column; max-width: 400px;">
+   <span class="responsive-text">
  <strong>Mark tasks as done or not done in real times</strong>offering transparency and accountability.
 View each employee's task completion rate for better performance analysis.
      </span>

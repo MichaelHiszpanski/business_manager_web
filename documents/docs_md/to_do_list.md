@@ -6,9 +6,9 @@ slug: to_do_list
 
 ## To-Do List: Your Productivity Partner in Business Management
 
-<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
- <img alt="Image" src="https://github.com/user-attachments/assets/d017d347-8216-46b0-a3be-b4b7e33b8b5c"  width="200" height="400"/>
-  <span style="display: flex; flex-direction: column; max-width: 400px;">
+<p class="responsive-container">
+ <img alt="Image" src="https://github.com/user-attachments/assets/497ef89a-9ba6-4f50-b3bd-66d73d85b59d" width="200" height="400"/>
+ <span class="responsive-text">
 <strong>The To-Do List</strong>feature in the Business Manager app is designed to help business owners and professionals stay organized and manage their tasks efficiently. With a focus on simplicity and usability, the To-Do List helps you prioritize and keep track of daily tasks, deadlines, and important projects—all in one place.
   </span>
 </p>
@@ -21,11 +21,9 @@ slug: to_do_list
 
 ## Key Features of the To-Do List
 
-<p style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-  
-  <img alt="Image" src="https://github.com/user-attachments/assets/0f0c6843-7480-4fcc-8337-7946996edcd9" width="200" height="400"/>
-  
-  <span style="display: flex; flex-direction: column; max-width: 400px;">
+<p class="responsive-container">
+  <img alt="Image" src="https://github.com/user-attachments/assets/84253115-3d80-4388-bfa8-490e1423cb62" width="200" height="400"/>
+  <span class="responsive-text">
     <strong>Task Prioritization:</strong> Organize tasks by priority levels to focus on what matters most. Categorize tasks based on urgency or importance to streamline your workflow. <br><br>
     <strong>Due Dates & Reminders:</strong> Set deadlines and receive reminders to ensure nothing slips through the cracks, helping you stay ahead in managing responsibilities.<br><br> 
     <strong>Quick Add:</strong> Add tasks quickly on the go to capture ideas or commitments instantly.
