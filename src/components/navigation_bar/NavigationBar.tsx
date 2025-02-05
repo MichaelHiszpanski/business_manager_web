@@ -96,9 +96,10 @@ const NavigationBar: FC = () => {
                   key={element.name}
                   name={element.name}
                   hrefLink={element.hrefLink}
-                  className={` ${
-                    isDocsPage ? "text-white" : "text-black"
-                  } font-bold hover:underline mb-2"`}
+                  // className={` ${
+                  //   isDocsPage ? "text-white" : "text-black"
+                  // } font-bold hover:underline mb-2 text-xl"`}
+                  className={`${styleButtonsLinks} mb-2`}
                   onClick={() => setIsModalOpen(false)}
                 />
               ))}
@@ -109,7 +110,7 @@ const NavigationBar: FC = () => {
                 <NavigationLinkButton
                   name="Sign In"
                   hrefLink="/sign-in"
-                  className={` ${isDocsPage ? "text-white" : "text-black"}`}
+                  className={`${styleButtonsLinks} mb-2`}
                 />
               )}
             </div>
