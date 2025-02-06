@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { resetPassword } from "@/supabase/supabaseAuth";
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 import Link from "next/link";
+import { buttonDefaultStyle } from "@/consts/styles";
 
 const ResetPassword: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -65,10 +66,7 @@ const ResetPassword: React.FC = () => {
           label={"Email Address"}
           error={error}
         />
-        <button
-          type="submit"
-          className="bg-blue-500 mt-5 text-white w-full py-2  rounded"
-        >
+        <button type="submit" className={buttonDefaultStyle}>
           Send Reset Email
         </button>
       </form>

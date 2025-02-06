@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/supabase/supabaseClient";
 import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
+import { buttonDefaultStyle } from "@/consts/styles";
 
 const UpdatePassword: React.FC = () => {
   const [password, setPassword] = useState("");
@@ -78,7 +79,7 @@ const UpdatePassword: React.FC = () => {
       <form
         onSubmit={handleUpdatePassword}
         className="flex flex-col items-center md:w-[600px] w-[90%]
-        justify-center md:border border-gray-400 md:p-12 p-2 rounded-xl z-50"
+        justify-center md:border border-gray-400 md:p-12 p-2 rounded-xl "
       >
         <CustomTextInput
           type="password"
@@ -90,10 +91,7 @@ const UpdatePassword: React.FC = () => {
           label={"Password"}
           error={error}
         />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white w-full py-2 mt-2 rounded"
-        >
+        <button type="submit" className={buttonDefaultStyle}>
           Update Password
         </button>
       </form>

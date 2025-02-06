@@ -62,8 +62,9 @@ export default async function DocsPage({
   const contentHtml = processedContent.toString();
 
   return (
-    <div className=" w-full items-center bg-gradient-to-r from-colorSix to-colorSeven justify-center pb-24 pt-[100px] flex flex-col  ">
+    <div className=" w-full items-start bg-gradient-to-r from-colorSix to-colorSeven justify-start  pb-24 pt-[100px] flex flex-col  ">
       <ServicesSideBar posts={posts} />
+
       <div className="  max-w-[1000px] flex flex-col items-center justify-center px-4">
         <div className="prose w-full md:max-w-none bg-white p-5 mt-[100px]  rounded-xl shadow-xl">
           <h1 className="font-semibold text-3xl py-5 select-none text-colorFive">

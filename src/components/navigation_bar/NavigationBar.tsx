@@ -35,7 +35,7 @@ const NavigationBar: FC = () => {
   const styleButtonsLinks =
     "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-xl overflow-hidden bg-opacity-75 border border-colorSix";
   return (
-    <nav className=" absolute top-0 left-0 w-full h-[100px]   z-10 flex flex-row justify-evenly items-center">
+    <nav className=" absolute top-0  w-full h-[100px]   z-10 flex flex-row justify-evenly items-center">
       <Image
         src={wave_one}
         alt="bg"
@@ -47,8 +47,8 @@ const NavigationBar: FC = () => {
         onDragStart={(e) => e.preventDefault()}
         onClick={(e) => e.preventDefault()}
       />
-      <div className="flex z-20   flex-row md:justify-evenly  justify-start items-center w-full h-full  ">
-        <div className="p-5 rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
+      <div className="flex  z-40  flex-row md:justify-evenly  justify-start items-center w-full h-full  ">
+        <div className="p-5  rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
           <Image
             src={earth3}
             alt="logo"
@@ -87,25 +87,21 @@ const NavigationBar: FC = () => {
         )}
       </div>
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
+        <div className="fixed  inset-0 bg-black bg-opacity-50 flex justify-center items-start z-50">
           <div
-            className="bg-gradient-to-r from-colorSix to-colorSeven w-[280px] rounded-full justify-center items-center flex flex-col shadow-sm  h-[280px] mt-[100px] "
+            className="bg-gradient-to-r  sticky top-[150px] from-colorSix to-colorSeven w-[280px] rounded-full flex flex-col shadow-sm h-[280px]"
             ref={navRef}
           >
-            <div className="flex flex-col justify-center items-center text-black ">
+            <div className="flex flex-col justify-center items-center text-black h-full">
               {navigationItems.map((element) => (
                 <NavigationLinkButton
                   key={element.name}
                   name={element.name}
                   hrefLink={element.hrefLink}
-                  // className={` ${
-                  //   isDocsPage ? "text-white" : "text-black"
-                  // } font-bold hover:underline mb-2 text-xl"`}
                   className={`${styleButtonsLinks} mb-2`}
                   onClick={() => setIsModalOpen(false)}
                 />
               ))}
-
               {isAuthenticated ? (
                 <UserButton />
               ) : (

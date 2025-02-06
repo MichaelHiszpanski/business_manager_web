@@ -6,6 +6,7 @@ import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
 import Link from "next/dist/client/link";
 import { useRouter } from "next/navigation";
 import { signIn } from "@/supabase/supabaseAuth";
+import { buttonDefaultStyle } from "@/consts/styles";
 
 const SignIn: NextPage = () => {
   const router = useRouter();
@@ -79,7 +80,7 @@ const SignIn: NextPage = () => {
         <form
           onSubmit={handleLogin}
           className="flex flex-col items-center 
-           justify-center z-30 md:border border-gray-400 md:p-12 p-2 rounded-xl w-full"
+           justify-center md:border border-gray-400 md:p-12 p-2 rounded-xl w-full"
         >
           <CustomTextInput
             placeholder="Enter Email"
@@ -101,10 +102,7 @@ const SignIn: NextPage = () => {
             label={"Password"}
             error={errors.password}
           />
-          <button
-            type="submit"
-            className="bg-blue-500 md:w-full  w-full text-white px-4 py-2 rounded mt-2 font-orbitron_variable font-bold"
-          >
+          <button type="submit" className={buttonDefaultStyle}>
             Sign In
           </button>
         </form>
