@@ -51,7 +51,7 @@ const UserButton: React.FC = () => {
       <button
         onClick={() => setMenuOpen((prev) => !prev)}
         className="flex  hover:scale-125 transition-transform duration-300 ease-in-out
-          items-center gap-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+          items-center gap-2 p-2 bg-gray-200 shadow-lg shadow-white rounded-full hover:bg-gray-300"
       >
         <Image
           src={userLogo2}
