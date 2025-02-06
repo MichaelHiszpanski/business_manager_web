@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { supabase } from "@/supabase/supabaseClient";
 import { useRouter } from "next/navigation";
-import { userLogo } from "@/consts/images";
+import { userLogo, userLogo2 } from "@/consts/images";
 import Image from "next/image";
 import useOutsideClick from "@/utils/helpers/useOutsideClick";
 
@@ -47,13 +47,14 @@ const UserButton: React.FC = () => {
   }
 
   return (
-    <div className="relative  ">
+    <div className=" ">
       <button
         onClick={() => setMenuOpen((prev) => !prev)}
-        className="flex items-center gap-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300"
+        className="flex  hover:scale-125 transition-transform duration-300 ease-in-out
+          items-center gap-2 p-2 bg-gray-200 rounded-full hover:bg-gray-300"
       >
         <Image
-          src={userLogo} // user.user_metadata?.avatar_url ||
+          src={userLogo2}
           alt="User"
           className="select-none overflow-hidden"
           style={{
@@ -62,27 +63,26 @@ const UserButton: React.FC = () => {
           }}
           onDragStart={(e) => e.preventDefault()}
           onClick={(e) => e.preventDefault()}
-          height={70}
-          width={70}
+          height={55}
+          width={55}
         />
-        {/* <span>{user.user_metadata?.name || user.email}</span> */}
       </button>
 
       {menuOpen && (
         <div
           ref={dropdownRef}
-          className="absolute left-1/2  bg-white rounded-md shadow-md transform -translate-x-1/2"
+          className="absolute border-2 border-colorSix bg-colorFive rounded-xl shadow-md transform -translate-x-1/2"
           style={{ width: "156px" }}
         >
           <button
             onClick={navigateProfile}
-            className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"
+            className="w-full px-4 py-2 text-left text-colorSix font-mono font-semibold hover:bg-gray-100"
           >
             Profile
           </button>
           <button
             onClick={handleLogout}
-            className="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"
+            className="w-full px-4 py-2 text-left text-colorSix font-mono font-semibold hover:bg-gray-100"
           >
             Log Out
           </button>

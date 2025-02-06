@@ -47,7 +47,7 @@ const NavigationBar: FC = () => {
         onDragStart={(e) => e.preventDefault()}
         onClick={(e) => e.preventDefault()}
       />
-      <div className="flex flex-row md:justify-evenly items-center w-full h-full z-50">
+      <div className="flex relative  flex-row md:justify-evenly  justify-start items-center w-full h-full z-50 ">
         <div className="p-5 rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
           <Image
             src={earth3}
@@ -73,7 +73,9 @@ const NavigationBar: FC = () => {
           />
         ))}
         {isAuthenticated ? (
-          <UserButton />
+          <div className="hidden md:flex">
+            <UserButton />
+          </div>
         ) : (
           <NavigationLinkButton
             name="Sign In"
@@ -87,7 +89,7 @@ const NavigationBar: FC = () => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center z-50">
           <div
-            className="bg-gradient-to-r from-colorSix to-colorSeven w-[250px] rounded-full justify-center items-center flex flex-col shadow-sm  h-[250px] mt-[100px] "
+            className="bg-gradient-to-r from-colorSix to-colorSeven w-[280px] rounded-full justify-center items-center flex flex-col shadow-sm  h-[280px] mt-[100px] "
             ref={navRef}
           >
             <div className="flex flex-col justify-center items-center text-black ">

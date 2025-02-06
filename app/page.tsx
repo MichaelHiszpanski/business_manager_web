@@ -19,10 +19,6 @@ export default function Home() {
     <main
       className="flex pt-navPadding flex-col w-full  h-full items-center sm:items-start
      bg-white dark:bg-white "
-      //  style={{
-      //   backgroundColor: "#ffffff",
-      //   color: "#000000",
-      // }}
     >
       <section
         className=" absolute top-80 flex-col  md:hidden
@@ -144,9 +140,9 @@ export default function Home() {
             <p className="text-lg font-semibold">Key Features:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <span className="font-bold">Effortless Task Management:</span>{" "}
-                Stay on top of your to-do list and never miss a deadline with
-                intuitive task prioritization and reminders.
+                <span className="font-bold">To-Do List:</span> Stay on top of
+                your to-do list and never miss a deadline with intuitive task
+                prioritization and reminders.
               </li>
               <li>
                 <span className="font-bold">
@@ -156,19 +152,14 @@ export default function Home() {
                 top of your finances.
               </li>
               <li>
-                <span className="font-bold">Seamless Contact Management:</span>{" "}
-                Keep all client and team information in one secure place, making
-                communication simple and efficient.
+                <span className="font-bold">Employee Management:</span> Add your
+                employees, assign them tasks and mark them as completed.
+                Visualization of progress and resources.
               </li>
               <li>
-                <span className="font-bold">HR Essentials:</span> Manage
-                employee information, track roles, and streamline hiring to
-                support your growing team.
-              </li>
-              <li>
-                <span className="font-bold">Integrated Calendar:</span> Plan,
-                schedule, and view upcoming tasks or events by day, week, or
-                month for better organization.
+                <span className="font-bold">Work Manager:</span> Plan, schedule,
+                and view upcoming tasks or events by day, week, or month for
+                better organization.
               </li>
             </ul>
           </div>
@@ -177,7 +168,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[500px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5"
+          className="md:w-[500px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5 mt-24"
         >
           Why Choose Our App? Designed specifically for small businesses, our
           app combines simplicity and power, giving you the tools to handle
@@ -189,7 +180,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[700px] text-black line-clamp-7 bg-colorEight bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5"
+          className="md:w-[700px] text-black line-clamp-7 bg-colorEight bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5  mt-24"
         >
           Get Started Today Start using the Business Manager app to experience
           smoother workflows, better productivity, and a more organized business
