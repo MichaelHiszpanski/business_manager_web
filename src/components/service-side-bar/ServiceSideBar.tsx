@@ -25,10 +25,10 @@ const ServicesSideBar: React.FC<SidebarProps> = ({ posts }) => {
   };
 
   return (
-    <aside className=" w-max  md:w-1/5 bg-transparent md:p-6 p-2 fixed left-0 top-[150px] cursor-pointer ">
+    <aside className=" w-max  md:w-1/5 bg-transparent md:p-6 p-2 fixed left-0 top-[150px] cursor-pointer z-20">
       <nav ref={navRef}>
         <h2
-          className="text-2xl md:text-3xl font-bold mb-4 text-colorFour cursor-pointer select-none"
+          className="text-2xl md:text-3xl font-bold mb-4 text-colorFour cursor-pointer select-none "
           onClick={handleHeadingClick}
         >
           Content

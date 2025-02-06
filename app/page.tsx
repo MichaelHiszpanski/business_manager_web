@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </section>
       <div className="w-full flex flex-col px-5">
-        <h2 className=" font-orbitron_variable md:text-5xl text-3xl z-20 font-bold text-center w-full my-10 text-black ">
+        <h2 className=" font-orbitron_variable md:text-5xl text-3xl  font-bold text-center w-full my-10 text-black ">
           Business Manager
         </h2>
         <div className="flex md:flex-row items-center flex-col-reverse md:px-[200px] my-12">

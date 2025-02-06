@@ -35,7 +35,7 @@ const NavigationBar: FC = () => {
   const styleButtonsLinks =
     "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-xl overflow-hidden bg-opacity-75 border border-colorSix";
   return (
-    <nav className="w-full z-50 fixed top-0  h-[100px] flex flex-row justify-evenly items-center">
+    <nav className=" absolute top-0 left-0 w-full h-[100px]   z-10 flex flex-row justify-evenly items-center">
       <Image
         src={wave_one}
         alt="bg"
@@ -47,12 +47,12 @@ const NavigationBar: FC = () => {
         onDragStart={(e) => e.preventDefault()}
         onClick={(e) => e.preventDefault()}
       />
-      <div className="flex relative  flex-row md:justify-evenly  justify-start items-center w-full h-full z-50 ">
+      <div className="flex z-20   flex-row md:justify-evenly  justify-start items-center w-full h-full  ">
         <div className="p-5 rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
           <Image
             src={earth3}
             alt="logo"
-            className="w-24 h-24 cursor-pointer select-none"
+            className="w-24 h-24 cursor-pointer md:cursor-default select-none"
             onDragStart={(e) => e.preventDefault()}
             onClick={() => {
               if (isMobileSize) {
