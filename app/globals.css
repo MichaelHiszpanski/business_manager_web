@@ -68,5 +68,7 @@ body {
   }
   .responsive-text {
     text-align: center;
+    width: 90%;
+    margin-bottom: 10px;
   }
 }
