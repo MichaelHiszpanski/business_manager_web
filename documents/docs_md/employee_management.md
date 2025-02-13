@@ -27,7 +27,7 @@ slug: employee_management
 2. **Task Assignment**
 
 <p class="responsive-container bg-colorSix bg-opacity-50 rounded-xl">
- <img alt="Image" src="https://github.com/user-attachments/assets/be5a4b38-ac6a-49be-b28c-29be78987c5f"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+ <img alt="Image" src="https://github.com/user-attachments/assets/48e903ff-fe19-42aa-94ec-fcf87358cbb4"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
    <span class="responsive-text font-mono">
  <strong> Assign tasks to specific employees</strong> ensuring clear delegation of responsibilities.
 Specify task details such as deadlines and priorities to keep everyone on track.
@@ -37,7 +37,7 @@ Specify task details such as deadlines and priorities to keep everyone on track.
 3. **Track Task Progress**
 
 <p class="responsive-container bg-colorFive bg-opacity-50 rounded-xl">
- <img alt="Image" src="https://github.com/user-attachments/assets/876a794b-20f1-4580-b8c3-4546d4290554" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+ <img alt="Image" src="https://github.com/user-attachments/assets/d047acdd-9b8e-4146-893c-e517cd323fa8" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
    <span class="responsive-text text-white font-mono">
  <strong>Mark tasks as done or not done in real times</strong> offering transparency and accountability.
 View each employee's task completion rate for better performance analysis.
