@@ -10,9 +10,10 @@ import { supabase } from "@/supabase/supabaseClient";
 import UserButton from "@/supabase/UserButton";
 import useOutsideClick from "@/utils/helpers/useOutsideClick";
 
-const NavigationBar: FC = () => {
+const NavigationBar: FC = (backgroudnColor = "bg-transparent") => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const navRef = useRef<HTMLDivElement>(null);
   useOutsideClick(navRef, () => setIsModalOpen(false));
@@ -35,18 +36,9 @@ const NavigationBar: FC = () => {
   const styleButtonsLinks =
     "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-xl overflow-hidden bg-opacity-75 border border-colorSix";
   return (
-    <nav className=" absolute top-0  w-full h-[100px]   z-10 flex flex-row justify-evenly items-center">
-      <Image
-        src={wave_one}
-        alt="bg"
-        className=" w-full absolute top-0 md:top-[-60px]   select-none overflow-hidden "
-        style={{
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        onDragStart={(e) => e.preventDefault()}
-        onClick={(e) => e.preventDefault()}
-      />
+    <nav //${backgroudnColor}
+      className={`absolute top-0  w-full h-[100px] bg-gradient-to-r   from-colorSix to-colorSeven      flex flex-row justify-evenly items-center`}
+    >
       <div className="flex  z-40  flex-row md:justify-evenly  justify-start items-center w-full h-full  ">
         <div className="p-5  rounded-full bg-gradient-to-r from-colorSix to-colorSeven ">
           <Image

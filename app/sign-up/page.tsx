@@ -87,13 +87,13 @@ const SignUp: NextPage = () => {
   return (
     <div className="w-full  flex flex-col items-center h-screen relative bg-white">
       <div className="w-full h-full  flex flex-col items-center justify-center ">
-        <h1 className="text-2xl mt-12 font-bold mb-4 font-orbitron_variable text-colorOne">
+        <h1 className="text-2xl mt-24 font-bold mb-4 font-orbitron_variable text-colorOne">
           Sign Up
         </h1>
         {apiError && <p className="text-red-500 mb-4">{apiError}</p>}
         <form
           onSubmit={handleSignUp}
-          className="flex flex-col  items-cent§er md:w-[600px] w-[90%] md:border justify-center md:border-gray-400 p-2 md:p-12 rounded-xl"
+          className="flex flex-col  items-cent§er md:w-[600px] w-[90%]  md:border justify-center md:border-gray-400 p-2 md:p-12 rounded-xl"
         >
           <CustomTextInput
             placeholder="Email"
