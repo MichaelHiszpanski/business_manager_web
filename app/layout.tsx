@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavigationBar from "@/components/navigation_bar/NavigationBar";
 import Footer from "@/components/footer/Footer";
-import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,20 +32,11 @@ export default function RootLayout({
         <meta name="color-scheme" content="light only" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white relative`}
-        style={{
-          backgroundColor: "#ffffff",
-          color: "#000000",
-          WebkitFilter: "invert(0) !important",
-          filter: "invert(0) !important",
-          margin: "0",
-          padding: "0",
-        }}
-      >
+      <body>
         <div className=" sticky top-0 left-0 z-10">
           <NavigationBar />
         </div>
+
         {children}
         <Footer
           isVisible={true}

@@ -10,19 +10,20 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+
+import HomeContainer from "@/components/HomeContainer/HomeContainer";
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
 
   return (
-    <main
-      className="flex pt-navPadding flex-col w-full  h-full items-center sm:items-start
-     bg-white dark:bg-white "
-    >
+    <article id="gallery" className="w-[100vw]  ">
+      <HomeContainer />
+
       <section
         className=" absolute top-80 flex-col  md:hidden
-        md:rotate-0 w-full md:w-full overflow-hidden  2"
+    md:rotate-0 w-full md:w-full overflow-hidden  2"
       >
         <div className="relative w-full flex  h-full">
           <Image
@@ -64,7 +65,7 @@ export default function Home() {
 
       <section
         className=" absolute top-80 flex-col my-[300px]
-        md:rotate-0 w-full md:w-full overflow-hidden  "
+    md:rotate-0 w-full md:w-full overflow-hidden  "
       >
         <div className="relative w-full flex  h-full">
           <Image
@@ -203,6 +204,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </main>
+    </article>
   );
 }

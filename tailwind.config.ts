@@ -13,8 +13,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: "#BEB0C3",
         secondary: "#E4E4E4",
         colorOne: "#07000E",
@@ -32,6 +30,9 @@ const config: Config = {
         darklessBlue: "#64748B",
         colorYellow: "#FAED26",
         colorGreen: "#82C232",
+        colorSrcOne: "#E27E01",
+        colorSrcTwo: "#761568",
+        colorSrcThree: "#00AAC8",
       },
       fontFamily: {
         jaro: ["Jaro", "sans-serif"],
@@ -42,6 +43,34 @@ const config: Config = {
       },
       padding: {
         navPadding: "150px",
+      },
+      animation: {
+        crawl: "crawl 60s linear infinite",
+      },
+      keyframes: {
+        crawl: {
+          "0%": {
+            top: "100%",
+            opacity: "1",
+            transform: "rotateX(25deg) scale(1)",
+          },
+          "80%": {
+            opacity: "1",
+            transform: "rotateX(25deg) scale(0.5)",
+          },
+          "100%": {
+            top: "-100%",
+            opacity: "0",
+            transform: "rotateX(25deg) scale(0.3)",
+          },
+        },
+      },
+      perspective: {
+        800: "800px",
+        1000: "1000px",
+      },
+      rotate: {
+        "45": "45deg",
       },
     },
   },
