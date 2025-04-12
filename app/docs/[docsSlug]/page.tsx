@@ -4,8 +4,8 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import html from "remark-html";
-import NavigationBar from "@/components/navigation_bar/NavigationBar";
-import ServicesSideBar from "@/components/service-side-bar/ServiceSideBar";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
+import ServicesSideBar from "@/components/ServicesSideBar/ServiceSideBar";
 import remarkStringify from "remark-stringify";
 interface Frontmatter {
   title: string;

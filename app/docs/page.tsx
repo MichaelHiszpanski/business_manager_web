@@ -1,6 +1,6 @@
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/Footer/Footer";
 import type { NextPage } from "next";
-import NavigationBar from "@/components/navigation_bar/NavigationBar";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import React from "react";
 import Link from "next/link";
 import path from "path";

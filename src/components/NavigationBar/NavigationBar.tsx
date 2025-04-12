@@ -3,7 +3,7 @@ import React, { FC, useState, useRef, useEffect } from "react";
 import { earth3, logo, wave_one } from "@/consts/images";
 import Image from "next/image";
 import { navigationItems } from "@/consts/navigation_list";
-import NavigationLinkButton from "../buttons/NavigationLinkButton";
+import NavigationLinkButton from "../NavigationLinkButton/NavigationLinkButton";
 import { usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import { supabase } from "@/supabase/supabaseClient";

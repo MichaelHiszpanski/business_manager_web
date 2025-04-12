@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { resetPassword } from "@/supabase/supabaseAuth";
-import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
+import CustomTextInput from "@/components/CustomTextInput/CustomTextInput";
 import Link from "next/link";
 import { buttonDefaultStyle } from "@/consts/styles";
 

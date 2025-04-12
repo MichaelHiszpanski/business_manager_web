@@ -2,8 +2,8 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavigationBar from "@/components/navigation_bar/NavigationBar";
-import Footer from "@/components/footer/Footer";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { NextPage } from "next";
 
-import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
+import CustomTextInput from "@/components/CustomTextInput/CustomTextInput";
 import Link from "next/dist/client/link";
 import { useRouter } from "next/navigation";
 import { signIn } from "@/supabase/supabaseAuth";

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/supabase/supabaseClient";
-import CustomTextInput from "@/components/custom_text_input/CustomTextInput";
+import CustomTextInput from "@/components/CustomTextInput/CustomTextInput";
 import { buttonDefaultStyle } from "@/consts/styles";
 
 const UpdatePassword: React.FC = () => {
