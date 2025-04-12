@@ -41,11 +41,11 @@ const SignIn: NextPage = () => {
     const errorsList: any = {};
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(userData.email)) {
-      errorsList.email = "Please enter a valid email address.";
-      isValid = false;
-    } else if (userData.email.trim() === "") {
+    if (userData.email.trim() === "") {
       errorsList.email = "Email address cannot be empty.";
+      isValid = false;
+    } else if (!emailRegex.test(userData.email)) {
+      errorsList.email = "Please enter a valid email address.";
       isValid = false;
     }
 
