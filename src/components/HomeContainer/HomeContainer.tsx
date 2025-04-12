@@ -78,10 +78,10 @@ const HomeContainer: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className=" relative w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-t from-colorSeven via-colorSix to-colorSix text-white flex flex-col justify-center items-center"
+      className=" relative w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-r from-colorSix to-colorSeven text-white flex flex-col justify-center items-center"
     >
       <div className="md:w-1/2 p-4 text-center">
-        <h1 className=" text-3xl md:text-5xl font-orbitron_variable mb-10">
+        <h1 className=" text-3xl font-bold md:text-5xl font-orbitron_variable mb-10 text-colorOne">
           Business Manager
         </h1>
         <p className="text-lg md:text-xl font-mono text-colorFive">
@@ -92,9 +92,9 @@ const HomeContainer: React.FC = () => {
 
       <div
         ref={panelOneRef}
-        className="absolute top-0 left-0 w-[100vw] h-[100vh] bg-purple-700 flex flex-col justify-center items-center"
+        className="absolute top-0 left-0 w-[100vw] px-2 h-[100vh] bg-purple-700 flex flex-col justify-center items-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
           Designed for modern businesses.
         </h2>
         <p className="text-lg md:text-xl text-white font-mono max-w-xl text-center">
