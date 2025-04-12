@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React, { FC } from "react";
+
 interface Props {
   isVisible: boolean;
   backgroudnColor?: string;
@@ -12,11 +12,6 @@ const Footer: FC<Props> = ({
   backgroudnColor,
   fontColor = "text-colorTwo",
 }) => {
-  const router = useRouter();
-
-  const handleContactClick = () => {
-    router.push("/contact?scrollTo=bottom");
-  };
   return (
     <footer //fixed bottom-0 left-0
       className={` w-full h-[85px] flex flex-col md:flex-row 
