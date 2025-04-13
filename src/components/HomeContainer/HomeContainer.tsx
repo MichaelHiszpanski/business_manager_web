@@ -31,7 +31,7 @@ const HomeContainer: React.FC = () => {
 
       tl.fromTo(
         panelTwoHeadingRef.current,
-        { opacity: 0, y: 50, scale: 0.9, rotation: -90 },
+        { opacity: 0, y: 100, scale: 0.9, rotation: 180 },
         {
           opacity: 1,
           y: 0,

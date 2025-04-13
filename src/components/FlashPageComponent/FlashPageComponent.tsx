@@ -8,8 +8,7 @@ type Props = {
 };
 
 const FlashPageComponent: React.FC<Props> = ({ headingRef, waveRef }) => {
-  const waveText =
-    "Business Manager - your one-stop solution for all your Business needs!";
+  const waveText = "Your one-stop solution for all your Business needs!";
 
   return (
     <div className="w-[100vw] h-[100vh] p-4 md:mt-10 text-center flex flex-col justify-center items-center">
