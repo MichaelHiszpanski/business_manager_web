@@ -12,7 +12,7 @@ Business Manager is a user-friendly application built to help small and medium-s
 
 <p class="responsive-container bg-gray-300  bg-opacity-50 rounded-xl">
 
-  <img src="https://github.com/user-attachments/assets/01c75319-f987-4c3a-94d6-e225b38099ee" alt="Image" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex"  />
+  <img src="https://github.com/user-attachments/assets/4cfb8ae0-3028-4788-a11a-466f6bcc9dd3" alt="Image" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex"  />
 
  <span class="responsive-text font-mono">
 The Business Manager app is designed to provide **an all-in-one business solution**, allowing you to handle employee management, invoicing, task tracking, and client data seamlessly. Built with simplicity and efficiency in mind, it ensures a smooth user experience for business owners.

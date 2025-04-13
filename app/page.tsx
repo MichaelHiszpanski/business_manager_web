@@ -48,7 +48,6 @@ export default function Home() {
             style={{
               filter: "blur(8px)",
               opacity: "0.3",
-              // transform: "rotate(45deg) scale(1.5)",
             }}
           />
         </div>
