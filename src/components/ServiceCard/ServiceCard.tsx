@@ -1,32 +1,26 @@
+import Link from "next/link";
 import React, { FC } from "react";
 interface Props {
-  width: string;
-  height: string;
-  backgroudnColor?: string;
-  title: string;
-  content: string;
+  post: any;
 }
-const ServiceCard: FC<Props> = ({
-  width,
-  height,
-  backgroudnColor,
-  title,
-  content,
-}) => {
+const ServiceCard: FC<Props> = ({ post }) => {
   return (
-    <div
-      className={` ${width} ${height} bg-gradient-to-r ${backgroudnColor}
-                 border-2 rounded-lg border-colorFive mb-10 md:mb-12 flex 
-                 flex-col overflow-hidden shadow-lg  transition-transform 
-                 duration-300 ease-in-out hover:scale-110`}
+    <Link
+      href={`docs/${post.slug}`}
+      key={post?.title}
+      className=" p-8 rounded-xl  hover:scale-105 transition-transform duration-150 ease-in-out
+               shadow-lg shadow-white bg-colorFive relative border border-colorSix "
     >
-      <div className="w-full h-[15%] flex  flex-col justify-center items-center font-bold text-2xl bg-colorTwo bg-opacity-70 font-permanentMarker">
-        {title} csassas
-      </div>
-      <div className="w-full h-full py-[10px] flex flex-col bg-colorEight bg-opacity-50">
-        {content}
-      </div>
-    </div>
+      <h3 className=" text-xl font-semibold text-colorSix font-orbitron_variable select-none">
+        {post.title}
+      </h3>
+      <p className=" mt-4 text-sm text-colorSeven font-mono mb-2 select-none">
+        {post.meta}
+      </p>
+      <p className=" absolute bottom-3 right-8 font-orbitron_variable text-sm text-white select-none">
+        Read more...
+      </p>
+    </Link>
   );
 };
 

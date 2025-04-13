@@ -54,7 +54,6 @@ export default async function DocsPage({
   const { data, content } = matter(fileContent);
   const frontmatter = data as Frontmatter;
 
-  // const processedContent = await remark().use(html).process(content);
   const processedContent = await remark()
     .use(html, { sanitize: false })
     .process(content);

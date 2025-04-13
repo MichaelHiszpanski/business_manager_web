@@ -9,7 +9,6 @@ export const signUp = async (email: string, password: string) => {
     });
 
     if (error) {
-      console.error("Sign-up error:", error.message);
       return {
         success: false,
         error: error.message || "An error occurred. Please try again later.",
@@ -17,7 +16,6 @@ export const signUp = async (email: string, password: string) => {
     }
 
     if (data.user) {
-      console.log("User signed up successfully:", data);
       return { success: true };
     }
 
@@ -26,7 +24,6 @@ export const signUp = async (email: string, password: string) => {
       error: "Unexpected error occurred during sign-up.",
     };
   } catch (err) {
-    console.error("Error during sign-up:", err);
     return {
       success: false,
       error: "An error occurred. Please try again later.",
@@ -42,7 +39,6 @@ export const signIn = async (email: string, password: string) => {
     });
 
     if (error) {
-      console.error("Sign-in error:", error.message);
       if (error.message.includes("Invalid login credentials")) {
         return {
           success: false,
@@ -64,7 +60,6 @@ export const signIn = async (email: string, password: string) => {
         sameSite: "strict",
       });
 
-      console.log("User signed in successfully:", data);
       return { success: true };
     }
 
@@ -73,7 +68,6 @@ export const signIn = async (email: string, password: string) => {
       error: "Unexpected error occurred during sign-in.",
     };
   } catch (err) {
-    console.error("Error during sign-in:", err);
     return {
       success: false,
       error: "An error occurred. Please try again later.",
@@ -86,7 +80,6 @@ export const logOut = async () => {
     const { error } = await supabase.auth.signOut();
 
     if (error) {
-      console.error("Log-out error:", error.message);
       return {
         success: false,
         error: error.message || "An error occurred. Please try again later.",
@@ -94,10 +87,9 @@ export const logOut = async () => {
     }
 
     destroyCookie(null, "token", { path: "/" });
-    console.log("User signed out successfully!");
+
     return { success: true };
   } catch (err) {
-    console.error("Error during log-out:", err);
     return {
       success: false,
       error: "An error occurred. Please try again later.",

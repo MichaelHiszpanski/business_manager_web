@@ -13,7 +13,7 @@ const Footer: FC<Props> = ({
   fontColor = "text-colorTwo",
 }) => {
   return (
-    <footer //fixed bottom-0 left-0
+    <footer
       className={` w-full h-[85px] flex flex-col md:flex-row 
                 items-center bg-gradient-to-r  ${backgroudnColor} justify-center md:justify-between 
                  text-[#808A9D] dark:text-darkSecondary z-40 transition-opacity duration-300 ${

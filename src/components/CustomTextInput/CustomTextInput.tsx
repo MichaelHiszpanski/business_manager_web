@@ -34,16 +34,10 @@ const CustomTextInput: FC<Props> = ({
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.removeAttribute("readonly"); // Remove readonly to prevent autofill issues
+      inputRef.current.removeAttribute("readonly");
     }
   }, []);
 
-  const handleFocus = () => {
-    if (inputRef.current) {
-      inputRef.current.focus(); // Focus on input
-      inputRef.current.select(); // Select all text
-    }
-  };
   return (
     <div className="w-full  h-[90px]">
       {isLabel && (

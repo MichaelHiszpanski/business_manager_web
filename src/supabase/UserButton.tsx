@@ -31,7 +31,7 @@ const UserButton: React.FC = () => {
       router.push("/");
       setMenuOpen(false);
     } catch (error) {
-      console.error("Error signing out:", error);
+      console.error("Error logout:", error);
     }
   };
 

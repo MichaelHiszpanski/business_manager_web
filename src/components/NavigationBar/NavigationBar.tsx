@@ -12,16 +12,10 @@ import useOutsideClick from "@/utils/helpers/useOutsideClick";
 
 const NavigationBar: FC = (backgroudnColor = "bg-transparent") => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const pathname = usePathname();
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  const navRef = useRef<HTMLDivElement>(null);
-  useOutsideClick(navRef, () => setIsModalOpen(false));
-
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const navRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
   const isMobileSize = useMediaQuery({ maxWidth: 767 });
-
   const isDocsPage = pathname.startsWith("/docs");
 
   useEffect(() => {
@@ -33,10 +27,20 @@ const NavigationBar: FC = (backgroudnColor = "bg-transparent") => {
 
     return () => subscription.unsubscribe();
   }, []);
+
+  const handleLogoClick = () => {
+    if (isMobileSize) {
+      setIsModalOpen(!isModalOpen);
+    }
+  };
+
+  useOutsideClick(navRef, () => setIsModalOpen(false));
+
   const styleButtonsLinks =
     "text-colorSix shadow-lg shadow-white px-5 p-2 bg-colorFive rounded-xl overflow-hidden bg-opacity-75 border border-colorSix";
+
   return (
-    <nav //${backgroudnColor}
+    <nav
       className={`absolute top-0  w-full h-[100px] bg-gradient-to-r   from-colorSix to-colorSeven      flex flex-row justify-evenly items-center`}
     >
       <div className="flex  z-40  flex-row md:justify-evenly  justify-start items-center w-full h-full  ">
@@ -46,14 +50,9 @@ const NavigationBar: FC = (backgroudnColor = "bg-transparent") => {
             alt="logo"
             className="w-24 h-24 cursor-pointer md:cursor-default select-none"
             onDragStart={(e) => e.preventDefault()}
-            onClick={() => {
-              if (isMobileSize) {
-                setIsModalOpen(!isModalOpen);
-              }
-            }}
+            onClick={handleLogoClick}
           />
         </div>
-
         {navigationItems.map((element) => (
           <NavigationLinkButton
             key={element.name}
