@@ -1,6 +1,14 @@
 import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    domains: [
+      "vrwfykasolsqxqihpsmz.supabase.co",
+      "github.com",
+      "via.placeholder.com",
+      "imgur.com",
+    ],
+  },
   webpack: (config, { isServer }) => {
     config.experiments = {
       ...config.experiments,

@@ -12,7 +12,7 @@ Business Manager is a user-friendly application built to help small and medium-s
 
 <p class="responsive-container bg-gray-300  bg-opacity-50 rounded-xl">
 
-  <img src="https://github.com/user-attachments/assets/4cfb8ae0-3028-4788-a11a-466f6bcc9dd3" alt="Image" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex"  />
+  <img src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//490991739_1040134388001845_8247792308145439295_n.jpg" alt="Image" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex"  />
 
  <span class="responsive-text font-mono">
 The Business Manager app is designed to provide **an all-in-one business solution**, allowing you to handle employee management, invoicing, task tracking, and client data seamlessly. Built with simplicity and efficiency in mind, it ensures a smooth user experience for business owners.
@@ -31,7 +31,7 @@ The Business Manager app is designed to provide **an all-in-one business solutio
 ### **1. Secure Sign-In & Authentication with Supabase**
 
 <p class="responsive-container bg-teal-200  bg-opacity-50 rounded-xl">
- <img alt="Image" src="https://github.com/user-attachments/assets/d392dbf9-6eea-494d-8db7-f9ccfbdbbc6a"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+ <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//490983891_1401808470847971_3779321981756985830_n.jpg"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
  <span class="responsive-text font-mono">
 Sign in securely with your credentials and gain access to all features in one place. The app ensures data privacy and security, keeping your business information safe while allowing quick and easy logins.
  </span>
@@ -40,7 +40,7 @@ Sign in securely with your credentials and gain access to all features in one pl
 ### **2. Information & Connectivity**
 
 <p class="responsive-container bg-yellow-200  bg-opacity-50 rounded-xl">
- <img alt="Image" src="https://github.com/user-attachments/assets/4dab00f4-af63-4db9-86fe-caa1664d7dfc" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+ <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//490975961_1330886711360889_4677010077301814519_n.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
  <span class="responsive-text font-mono">
 Stay informed with the latest updates and **ensure seamless connectivity**. The app automatically checks globaly for an internet connection to keep data synchronized while still allowing offline functionality when needed.
  </span>
