@@ -73,7 +73,9 @@ const UpdatePassword: React.FC = () => {
         Set New Password
       </h1>
       {message && (
-        <p className="text-green-500 my-5 font-orbitron_variable">{message}</p>
+        <p className="text-green-500 my-5 px-2 font-orbitron_variable">
+          {message}
+        </p>
       )}
 
       <form
@@ -91,6 +93,7 @@ const UpdatePassword: React.FC = () => {
           label={"Password"}
           error={error}
         />
+        <div className="h-2" />
         <button type="submit" className={buttonDefaultStyle}>
           Update Password
         </button>
