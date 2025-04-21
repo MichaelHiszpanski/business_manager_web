@@ -110,7 +110,7 @@ export default function Home() {
             <h4 className="w-full text-center font-permanentMarker my-10 text-2xl text-black">
               Your All-in-One Business Management Solution
             </h4>
-            <div className="line-clamp-7  md:text-black text-colorFive font-mono md:px-24">
+            <div className="line-clamp-7  md:text-black text-colorFive font-mono md:px-24 select-none">
               Welcome to Your All-in-One Business Management Solution Running a
               business is challenging, but managing it doesn’t have to be. With
               our Business Manager app, streamline your daily operations, keep
@@ -123,7 +123,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[600px] text-black line-clamp-7 bg-colorSeven bg-opacity-20 p-2 rounded-xl md:ml-[50%] font-mono"
+          className="md:w-[600px] text-black line-clamp-7 bg-colorSeven bg-opacity-20 p-2 rounded-xl md:ml-[50%] font-mono select-none"
         >
           Running a business is challenging, but managing it doesn't have to be.
           Every day brings new challenges that consume your precious time.
@@ -131,11 +131,11 @@ export default function Home() {
           operations, better organize and stay in order, save your valuable time
           and focus on what you consider important.
         </p>
-        <h2 className="w-full text-center font-orbitron_variable md:text-4xl text-3xl my-10 text-black">
+        <h2 className="w-full text-center font-orbitron_variable md:text-4xl text-3xl my-10 text-black md:mt-20">
           What You’ll Love About Our App
         </h2>
 
-        <div className="md:w-[800px] text-black line-clamp-7 bg-colorSix bg-opacity-20 p-2 md:p-5 rounded-xl md:ml-[10%] font-mono ">
+        <div className="md:w-[800px] text-black line-clamp-7 bg-colorSix bg-opacity-20 p-2 md:p-5 rounded-xl md:ml-[10%] font-mono select-none">
           <div className="space-y-4 text-gray-800">
             <p className="text-lg font-semibold">Key Features:</p>
             <ul className="list-disc pl-6 space-y-2">
@@ -168,7 +168,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[500px] text-black line-clamp-7 bg-colorOne bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5 mt-24"
+          className="md:w-[500px] text-black line-clamp-7 bg-colorSeven bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5 mt-24 select-none"
         >
           Why Choose Our App? Designed specifically for small businesses, our
           app combines simplicity and power, giving you the tools to handle
@@ -180,7 +180,7 @@ export default function Home() {
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
-          className="md:w-[700px] text-black line-clamp-7 bg-colorEight bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5  mt-24"
+          className="md:w-[700px] text-black line-clamp-7 bg-colorEight bg-opacity-20 p-2 rounded-xl md:ml-[20%] font-mono my-5  mt-24 select-none"
         >
           Get Started Today Start using the Business Manager app to experience
           smoother workflows, better productivity, and a more organized business

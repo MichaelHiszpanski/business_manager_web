@@ -7,7 +7,7 @@ import { supabase } from "@/supabase/supabaseClient";
 const Profile: NextPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<any>(null);
-  const [showConfirm, setShowConfirm] = useState(false);
+  const [modalConfirm, setModalConfirm] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -81,14 +81,14 @@ const Profile: NextPage = () => {
           </p>
         </div>
         <button
-          onClick={() => setShowConfirm(true)}
+          onClick={() => setModalConfirm(true)}
           className="bg-red-600 text-white rounded-2xl px-12 py-2  hover:bg-red-700"
         >
           Delete Account
         </button>
       </div>
 
-      {showConfirm && (
+      {modalConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center z-50 shadow-xl shadow-white">
           <div className="bg-white p-6 rounded-md w-[90%] max-w-md shadow-lg border-2 border-red-600">
             <h2 className="text-xl font-semibold mb-4 text-red-600">
@@ -101,14 +101,14 @@ const Profile: NextPage = () => {
             </p>
             <div className="flex justify-end gap-4">
               <button
-                onClick={() => setShowConfirm(false)}
+                onClick={() => setModalConfirm(false)}
                 className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-black"
               >
                 Cancel
               </button>
               <button
                 onClick={() => {
-                  setShowConfirm(false);
+                  setModalConfirm(false);
                   deleteUserSupabaseAccount();
                 }}
                 className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
