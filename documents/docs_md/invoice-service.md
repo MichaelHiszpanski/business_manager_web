@@ -10,7 +10,7 @@ slug: invoice-service
   <span class="responsive-text font-mono">
 <strong>The Invoice Service in the Business Manager</strong>app is designed to make invoicing straightforward and efficient in simply 5 steps, ensuring businesses can manage billing, payments, and financial records with ease. This feature supports small business owners in staying on top of their finances and maintaining professionalism in client interactions.
   </span>
- <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//487072120_524387900472131_8326485272638197049_n.jpg"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+ <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//invoice_screen.jpg"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
 </p>
 
 ## Benefits of Using the Invoice Service
@@ -26,7 +26,7 @@ slug: invoice-service
 
 <p class="responsive-container bg-colorSeven md:px-2 bg-opacity-50 rounded-xl">
  <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//484544168_1026421742722974_2592372090967667761_n.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
-  <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//489730599_1591983777966327_1207486166314936600_n.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
+  <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//invoice_clinet.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
  <span class="responsive-text font-mono">
 <strong>Easily add a new Business or Client</strong> select from the list, and proceed to the next step
   </span>
@@ -35,7 +35,7 @@ slug: invoice-service
 - **Automated Calculations**: Automatically calculate totals, add multiple products or items, and stay tuned for future enhancements.
 
 <p class="responsive-container">
-  <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//487299522_1073937568093092_860941874368285361_n.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" >
+  <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//invoice_item.jpg" class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" >
   <img alt="Image" src="https://vrwfykasolsqxqihpsmz.supabase.co/storage/v1/object/public/business-manager-bucket//489731494_2557626467962459_8450385848162319308_n.jpg"  class="overflow-hidden rounded-xl w-[200px] h-[400px] flex" />
   <span class="responsive-text font-mono">
     <strong>Calculations & Invoice Details</strong>  
