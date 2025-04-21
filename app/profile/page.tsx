@@ -53,10 +53,10 @@ const Profile: NextPage = () => {
         Authorization: `Bearer ${accessToken}`,
       },
     });
-
+    console.log("response ===>", response);
     if (response.ok) {
       await supabase.auth.signOut();
-      router.push("/sign-in");
+      router.push("/");
     } else {
       alert("Failed to delete User Supabase account.");
     }
