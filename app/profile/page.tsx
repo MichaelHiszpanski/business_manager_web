@@ -53,7 +53,7 @@ const Profile: NextPage = () => {
         Authorization: `Bearer ${accessToken}`,
       },
     });
-    console.log("response ===>", response);
+
     if (response.ok) {
       await supabase.auth.signOut();
       router.push("/");
